@@ -11,3 +11,5 @@ Resources:
       Tags:
       - Key: foo
         Value: bar
+      - Key: add
+        Value: value
