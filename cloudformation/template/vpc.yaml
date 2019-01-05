@@ -8,3 +8,6 @@ Resources:
     Type: 'AWS::EC2::VPC'
     Properties:
       CidrBlock: !Ref CidrBlock
+      Tags:
+      - Key: foo
+        Value: bar
