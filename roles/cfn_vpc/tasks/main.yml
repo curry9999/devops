@@ -1,7 +1,7 @@
 ---
 - name: create a cloudformation stack
   cloudformation:
-    stack_name: "VPC-{{ item.name }}"
+    stack_name: "VPC-{{ item.env }}-{{ item.name }}"
     state: "{{ state }}"
     region: "{{ region }}"
     disable_rollback: true
