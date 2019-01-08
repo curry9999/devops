@@ -1,0 +1,13 @@
+---
+- name: create a cloudformation stack
+  cloudformation:
+    stack_name: "{{ item.name }}"
+    state: "{{ state }}"
+    region: "{{ region }}"
+    disable_rollback: true
+    template: "cfn/template/vpc.yaml"
+    template_parameters:
+      CidrBlock: "{{ item.cidr }}"
+      TagEnv: "{{ env }}"
+    tags:
+      Stack: "ansible-cloudformation"

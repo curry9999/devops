@@ -1,3 +1,4 @@
 ---
 state: "present"
 region: "ap-northeast-1"
+vpc_prefix: "VPC"
