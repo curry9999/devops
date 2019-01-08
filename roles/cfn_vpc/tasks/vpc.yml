@@ -5,7 +5,7 @@
   register: res
 
 - set_fact:
-    cfn_state: "{{ ansible_facts['cloudformation'][ item.name ]['stack_description']['stack_status'] }}"
+    cfn_state: "{{ ansible_facts['cloudformation'][ item.name ]['stack_description']['stack_status']|detaults[""] }}"
 
 - name: remove a cloudformation stack
   cloudformation:
