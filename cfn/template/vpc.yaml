@@ -3,13 +3,14 @@ Parameters:
   CidrBlock: 
     Type: String
     Description: CidrBlock.
+  TagEnv: 
+    Type: String
+    Description: CidrBlock.
 Resources:
   VPC:
     Type: 'AWS::EC2::VPC'
     Properties:
       CidrBlock: !Ref CidrBlock
       Tags:
-      - Key: foo
-        Value: bar
-      - Key: add
-        Value: value
+      - Key: "env"
+        Value: !Ref TagEnv

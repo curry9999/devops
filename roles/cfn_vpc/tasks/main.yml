@@ -8,6 +8,7 @@
     template: "cfn/template/vpc.yaml"
     template_parameters:
       CidrBlock: "{{ item.cidr }}"
+      TagEnv: "{{ env }}"
     tags:
       Stack: "ansible-cloudformation"
   with_items: "{{ vpcs }}"
