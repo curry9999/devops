@@ -1,0 +1,8 @@
+---
+- name: CloudFormation test
+  hosts: all
+  connection: local
+  gather_facts: false
+  roles:
+    - name: win_common
+      tags: [ 'windows' ]

@@ -1,0 +1,15 @@
+---
+- name: Set Timezone
+  win_timezone:
+    timezone: Tokyo Standard Time
+
+- name: Change Region
+  win_region:
+    location: 122
+    format: ja-JP
+    unicode_language: ja-JP
+  register: result
+
+- name: Change Region - Reboot
+  win_reboot:
+  when: result.restart_required

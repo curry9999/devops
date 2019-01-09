@@ -1,0 +1,8 @@
+---
+state: "present"
+region: "ap-northeast-1"
+ansible_user: administrator
+ansible_password: Curry0000%
+ansible_port: 5986
+ansible_connection: winrm
+ansible_winrm_server_cert_validation: ignore
