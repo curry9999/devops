@@ -20,8 +20,10 @@
     state: "{{ state }}"
     region: "{{ region }}"
     disable_rollback: true
-    template: "cfn/template/ec2.yaml"
+    template: "cfn/template/ec2_win.yaml"
     template_parameters:
       TagEnv: "{{ env }}"
+      TagOs: "{{ item.os }}"
+      TagVerion: "{{ item.version }}"
     tags:
       Stack: "ansible-cloudformation"

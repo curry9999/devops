@@ -2,7 +2,13 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters: 
   TagEnv: 
     Type: String
-    Description: CidrBlock.
+    Description: TagEnv.
+  TagOs: 
+    Type: String
+    Description: TagOs.
+  TagVerion: 
+    Type: String
+    Description: TagVerion.
 Resources:
   Ec2Instance: 
     Type: AWS::EC2::Instance
@@ -24,3 +30,7 @@ Resources:
       Tags:
         - Key: "env"
           Value: !Ref TagEnv
+        - Key: "os"
+          Value: !Ref TagOs
+        - Key: "version"
+          Value: !Ref TagVerion
