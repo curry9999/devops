@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  Ec2Instance: 
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: "ami-065bdc46039060415"
+      KeyName: "kp_ansible"
+      InstanceType: "t2.medium"
+      NetworkInterfaces: 
+        - AssociatePublicIpAddress: "true"
+          DeviceIndex: "0"
+      UserData:
+        Fn::Base64: !Sub |
+            <powershell>
+            Invoke-WebRequest -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile ConfigureRemotingForAnsible.ps1
+            powershell -ExecutionPolicy RemoteSigned .\ConfigureRemotingForAnsible.ps1
+            $admin = [ADSI]("WinNT://./administrator, user")
+            $admin.SetPassword("Curry0000%")
+            </powershell>
