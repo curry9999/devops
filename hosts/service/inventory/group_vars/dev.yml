@@ -2,3 +2,6 @@
 env: "dev"
 vpcs:
   - { name: "{{ vpc_prefix }}-{{ env }}-01" , cidr: "172.16.0.0/16" }
+
+ec2s:
+  - { name: "{{ ec2_prefix }}-{{ env }}-01" }

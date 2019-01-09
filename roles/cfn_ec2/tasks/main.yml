@@ -1,0 +1,3 @@
+---
+- include_tasks: "{{ role_path }}/tasks/ec2.yml"
+  with_items: "{{ ec2s }}"

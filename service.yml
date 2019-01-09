@@ -4,5 +4,5 @@
   connection: local
   gather_facts: false
   roles:
-    - name: cfn_vpc
-      tags: [ 'cfn' , 'vpc' ]
+    - name: cfn_ec2
+      tags: [ 'cfn' , 'ec2' ]

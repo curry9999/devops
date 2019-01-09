@@ -1,5 +1,9 @@
 ---
 env: "prd"
+
 vpcs:
   - { name: "{{ vpc_prefix }}-{{ env }}-01" , cidr: "10.1.0.0/16" }
   - { name: "{{ vpc_prefix }}-{{ env }}-02" , cidr: "10.2.0.0/16" }
+
+ec2s:
+  - { name: "{{ ec2_prefix }}-{{ env }}-01" }
