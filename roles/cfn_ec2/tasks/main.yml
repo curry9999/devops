@@ -1,5 +1,0 @@
----
-- include_tasks: "{{ role_path }}/../cfn_remove/tasks/main.yml"
-  with_items: "{{ ec2s }}"
-- include_tasks: "{{ role_path }}/tasks/win.yml"
-  with_items: "{{ ec2s }}"

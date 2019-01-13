@@ -1,0 +1,5 @@
+---
+- include_tasks: "{{ role_path }}/tasks/remove.yml"
+  with_items: "{{ cfn_var_name }}"
+- include_tasks: "{{ role_path }}/tasks/{{ cfn_yml_name }}.yml"
+  with_items: "{{ cfn_var_name }}"

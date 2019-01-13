@@ -1,5 +1,0 @@
----
-- include_tasks: "{{ role_path }}/../cfn_remove/tasks/main.yml"
-  with_items: "{{ vpcs }}"
-- include_tasks: "{{ role_path }}/tasks/vpc.yml"
-  with_items: "{{ vpcs }}"
