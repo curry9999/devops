@@ -1,15 +1,21 @@
 ---
-- name: Set Timezone
+- name: set timezone
   win_timezone:
     timezone: Tokyo Standard Time
 
-- name: Change Region
+- name: change region
   win_region:
     location: 122
     format: ja-JP
     unicode_language: ja-JP
   register: result
 
-- name: Change Region - Reboot
+- name: reboot
   win_reboot:
+  when: result.restart_required
+
+- name: wait for
+  win_wait_for:
+    port: 3389
+    delay: 60
   when: result.restart_required
