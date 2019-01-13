@@ -13,9 +13,3 @@
 - name: reboot
   win_reboot:
   when: result.restart_required
-
-- name: wait for
-  win_wait_for:
-    port: 3389
-    delay: 60
-  when: result.restart_required
