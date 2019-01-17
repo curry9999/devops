@@ -4,12 +4,12 @@
   connection: local
   gather_facts: false
   roles:
-    - name: cfn_create
+    - name: cloudformation ec2
       vars:
         cfn_var_name: "{{ ec2s }}"
         cfn_yml_name: "win"
       tags: [ 'cfn' , 'ec2' , 'win' ]
-    - name: cfn_create
+    - name: cloudformation vpc
       vars:
         cfn_var_name: "{{ vpcs }}"
         cfn_yml_name: "vpc"
