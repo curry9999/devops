@@ -5,7 +5,7 @@
     state: "{{ state }}"
     region: "{{ region }}"
     disable_rollback: true
-    template: "cfn/template/vpc.yaml"
+    template: "cfn/template/{{ cfn_yml_name }}.yaml"
     template_parameters:
       CidrBlock: "{{ item.cidr }}"
       TagEnv: "{{ env }}"
