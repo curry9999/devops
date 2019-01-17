@@ -6,6 +6,4 @@
   roles:
     - name: cfn_create
       vars:
-        cfn_var_name: "{{ ec2s }}"
-        cfn_yml_name: "win"
-      tags: [ 'cfn' , 'ec2' , 'win' ]
+        - { cfn_var_name: "{{ ecs }}" , cfn_yml_name: "ecs" }

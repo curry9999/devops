@@ -1,5 +1,7 @@
 ---
 state: "present"
 region: "ap-northeast-1"
+
 vpc_prefix: "VPC"
 ec2_prefix: "EC2"
+ecs_prefix: "ECS"
