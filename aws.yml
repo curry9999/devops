@@ -9,8 +9,3 @@
         cfn_var_name: "{{ ec2s }}"
         cfn_yml_name: "win"
       tags: [ 'cfn' , 'ec2' , 'win' ]
-    - name: cfn_create
-      vars:
-        cfn_var_name: "{{ vpcs }}"
-        cfn_yml_name: "vpc"
-      tags: [ 'cfn' , 'ec2' , 'vpc' ]
