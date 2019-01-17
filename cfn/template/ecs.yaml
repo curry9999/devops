@@ -8,3 +8,17 @@ Resources:
     Type: AWS::ECS::Cluster
     Properties:
       ClusterName: !Ref ClusterName
+  taskdefinition: 
+    Type: AWS::ECS::TaskDefinition
+    Properties: 
+      RequiresCompatibilities:
+        - "EC2"
+        - "FARGATE"
+      NetworkMode: "awsvpc"
+      Cpu: "1024"
+      Memory: "2048"
+      ContainerDefinitions: 
+        - 
+          Name: "my-app"
+          Image: "amazon/amazon-ecs-sample"
+          Essential: "true"
