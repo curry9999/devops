@@ -1,4 +1,11 @@
 ---
+- name: create a temporary keypair
+  ec2_key:
+    name: "{{ keypair }}"
+    state: "present"
+  changed_when: false
+  when: state=="present"
+
 - name: create a cloudformation stack
   cloudformation:
     stack_name: "{{ item.name }}"
@@ -10,5 +17,19 @@
       TagEnv: "{{ env }}"
       TagOs: "{{ item.os }}"
       TagVerion: "{{ item.version }}"
+      Keypair: "{{ keypair }}"
     tags:
       Stack: "ansible-cloudformation"
+  register: res
+
+- name: sleep 30
+  wait_for:
+    sleep: 30
+  when: res.changed and state=="present"
+
+- name: remove a temporary keypair
+  ec2_key:
+    name: "{{ keypair }}"
+    state: "absent"
+  changed_when: false
+  when: state=="present"
