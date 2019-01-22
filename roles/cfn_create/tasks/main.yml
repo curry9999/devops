@@ -4,5 +4,5 @@
   with_items: "{{ cfn_var_name }}"
 
 - name: create cloudformation stack
-  include_tasks: "{{ role_path }}/tasks/{{ cfn_yml_name }}.yml"
+  include_tasks: "{{ role_path }}/tasks/{{ task_yml_name }}.yml"
   with_items: "{{ cfn_var_name }}"
