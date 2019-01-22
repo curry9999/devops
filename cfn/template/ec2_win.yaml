@@ -9,12 +9,15 @@ Parameters:
   TagVerion: 
     Type: String
     Description: TagVerion.
+  Keypair: 
+    Type: String
+    Description: Keypair.
 Resources:
   Ec2Instance: 
     Type: AWS::EC2::Instance
     Properties: 
       ImageId: "ami-065bdc46039060415"
-      KeyName: "kp_ansible"
+      KeyName: !Ref Keypair
       InstanceType: "t2.medium"
       NetworkInterfaces: 
         - AssociatePublicIpAddress: "true"

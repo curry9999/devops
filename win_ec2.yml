@@ -1,0 +1,7 @@
+---
+- name: CloudFormation Windows Deploy
+  hosts: all
+  gather_facts: false
+  roles:
+    - name: win_common
+      tags: [ 'windows' , 'common' ]
