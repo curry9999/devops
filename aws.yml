@@ -1,9 +1,0 @@
----
-- name: CloudFormation test
-  hosts: all
-  connection: local
-  gather_facts: false
-  roles:
-    - name: cfn_create
-      vars:
-        - { cfn_var_name: "{{ ecs }}" , cfn_yml_name: "ecs" }
