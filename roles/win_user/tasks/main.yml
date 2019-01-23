@@ -1,0 +1,13 @@
+---
+- name: Ensure user bob is present
+  win_user:
+    name: "{{ item.username }}"
+    password: "{{ item.password }}"
+    state: "{{ state }}"
+  with_items: "{{ win_user }}"
+
+- name: Create a profile for an account
+  win_user_profile:
+    username: "{{ item.username }}"
+    state: "{{ state }}"
+  with_items: "{{ win_user }}"

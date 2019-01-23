@@ -5,3 +5,5 @@
   roles:
     - name: win_common
       tags: [ 'windows' , 'common' ]
+    - name: win_user
+      tags: [ 'windows' , 'user' ]
