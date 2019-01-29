@@ -1,16 +1,16 @@
 ---
-- name: initial # (1) 事前準備
+- name: initial
   win_psmodule:
     name: PowershellModule
     state: present
 
-- name: create windows powershell repository # (2) メイン
+- name: create windows powershell repository
   win_psrepository:
     name: psrepo
     source: https://www.myget.org/F/powershellgetdemo/api/v2
     state: present
 
-- name: install xActiveDirectory # (3) リポジトリからモジュールをインストールする
+- name: install xActiveDirectory
   win_psmodule:
     name: xActiveDirectory
     repository: psrepo
