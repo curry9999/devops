@@ -4,7 +4,8 @@
     stack_name: "{{ item.name }}"
   register: res
 
-- set_fact:
+- name: set cloudformation info
+  set_fact:
     cfn_state: "{{ ansible_facts['cloudformation'][ item.name ]['stack_description']['stack_status'] }}"
   when: ansible_facts['cloudformation'][ item.name ] is defined
 
