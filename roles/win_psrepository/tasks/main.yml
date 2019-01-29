@@ -1,0 +1,17 @@
+---
+- name: initial
+  win_psmodule:
+    name: PowershellModule
+    state: present
+
+- name: create windows powershell repository
+  win_psrepository:
+    name: psrepo
+    source: https://www.myget.org/F/powershellgetdemo/api/v2
+    state: present
+
+- name: install xActiveDirectory
+  win_psmodule:
+    name: xActiveDirectory
+    repository: psrepo
+    state: present

@@ -7,3 +7,5 @@
       tags: [ 'windows' , 'common' ]
     - name: win_user
       tags: [ 'windows' , 'user' ]
+    - name: win_psrepository
+      tags: [ 'windows' , 'psrepo' ]
