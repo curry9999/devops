@@ -12,12 +12,7 @@
     state: "{{ state }}"
     region: "{{ region }}"
     disable_rollback: true
-    template: "cfn/template/{{ cfn_yml_name }}.yaml"
-    template_parameters:
-      TagEnv: "{{ env }}"
-      TagOs: "{{ item.os }}"
-      TagVerion: "{{ item.version }}"
-      Keypair: "{{ keypair }}"
+    template: "{{ ec2s.template.yaml_path }}{{ item.name }}.yaml"
     tags:
       Stack: "ansible-cloudformation"
   register: res

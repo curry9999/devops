@@ -1,23 +1,10 @@
 AWSTemplateFormatVersion: 2010-09-09
-Parameters: 
-  TagEnv: 
-    Type: String
-    Description: TagEnv.
-  TagOs: 
-    Type: String
-    Description: TagOs.
-  TagVerion: 
-    Type: String
-    Description: TagVerion.
-  Keypair: 
-    Type: String
-    Description: Keypair.
 Resources:
   Ec2Instance: 
     Type: AWS::EC2::Instance
     Properties: 
-      ImageId: "ami-065bdc46039060415"
-      KeyName: !Ref Keypair
+      ImageId: ami-065bdc46039060415
+      KeyName: {{ keypair }}
       InstanceType: "t2.medium"
       NetworkInterfaces: 
         - AssociatePublicIpAddress: "true"
@@ -28,12 +15,12 @@ Resources:
           Invoke-WebRequest -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile ConfigureRemotingForAnsible.ps1
           powershell -ExecutionPolicy RemoteSigned .\ConfigureRemotingForAnsible.ps1
           $admin = [ADSI]("WinNT://./administrator, user")
-          $admin.SetPassword("Curry0000%")
+          $admin.SetPassword("{{ password }}")
           </powershell>
       Tags:
         - Key: "env"
-          Value: !Ref TagEnv
+          Value: {{ env }}
         - Key: "os"
-          Value: !Ref TagOs
+          Value: {{ item.os }}
         - Key: "version"
-          Value: !Ref TagVerion
+          Value: {{ item.version }}

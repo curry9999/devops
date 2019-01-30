@@ -1,12 +1,10 @@
 ---
 env: "prd"
 
-vpcs:
-  - { name: "{{ vpc_prefix }}-{{ env }}-01" , cidr: "10.1.0.0/16" }
-  - { name: "{{ vpc_prefix }}-{{ env }}-02" , cidr: "10.2.0.0/16" }
-
 ec2s:
-  - { name: "{{ ec2_prefix }}-{{ env }}-01" , os: "windows" , version: "2019" }
-
-ecs:
-  - { name: "{{ ecs_prefix }}-{{ env }}-01" }
+  record:
+    - { name: "{{ ec2_prefix }}-{{ env }}-01" , os: "windows" , version: "2019" }
+  template:
+    jinja2_path: cfn/template/
+    jinja2_name: ec2_win.jinja2
+    yaml_path: cfn/stack/
