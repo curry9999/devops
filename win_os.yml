@@ -11,3 +11,5 @@
       tags: [ 'windows' , 'user' ]
     - name: win_psrepository
       tags: [ 'windows' , 'psrepo' ]
+    - name: win_domain
+      tags: [ 'windows' , 'domain' ]
