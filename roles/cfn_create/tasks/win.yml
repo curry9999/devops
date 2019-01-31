@@ -12,7 +12,7 @@
     state: "{{ state }}"
     region: "{{ region }}"
     disable_rollback: true
-    template: "{{ ec2s.template.yaml_path }}{{ item.name }}.yaml"
+    template: "{{ ec2s.template.stack_path }}/{{ item.name }}.yaml"
     tags:
       Stack: "ansible-cloudformation"
   register: res
