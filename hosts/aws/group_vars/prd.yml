@@ -3,7 +3,7 @@ env: "prd"
 
 ec2s:
   record:
-    - { name: "{{ ec2_prefix }}-{{ env }}-01" , os: "windows" , version: "2019" }
+    - { name: "{{ ec2_prefix }}-{{ env }}-01" , os: "windows" , version: "2019" , imageid: ami-02fc48bb32777231e , instance_type: t2.medium }
   template:
     jinja2_path: cfn/template
     jinja2_name: ec2_win.jinja2
