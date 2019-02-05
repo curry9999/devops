@@ -7,8 +7,8 @@ Resources:
       KeyName: {{ keypair }}
       InstanceType: {{ item.instance_type }}
       NetworkInterfaces: 
-        - AssociatePublicIpAddress: "true"
-          DeviceIndex: "0"
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
       UserData:
         Fn::Base64: !Sub |
           <powershell>
@@ -18,9 +18,9 @@ Resources:
           $admin.SetPassword("{{ password }}")
           </powershell>
       Tags:
-        - Key: "env"
+        - Key: env
           Value: {{ env }}
-        - Key: "os"
+        - Key: os
           Value: {{ item.os }}
-        - Key: "version"
+        - Key: version
           Value: {{ item.version }}
