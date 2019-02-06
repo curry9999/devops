@@ -1,8 +1,0 @@
----
-- name: CloudFormation Template Generate
-  hosts: all
-  connection: local
-  gather_facts: false
-  roles:
-    - name: gen_cfn_template
-      tags: [ 'ec2' , 'template' ]

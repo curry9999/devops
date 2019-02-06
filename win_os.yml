@@ -5,11 +5,12 @@
   roles:
     - name: win_common
       tags: [ 'windows' , 'common' ]
+
     - name: win_update
       tags: [ 'windows' , 'update' ]
+
     - name: win_user
       tags: [ 'windows' , 'user' ]
+
     - name: win_psrepository
       tags: [ 'windows' , 'psrepo' ]
-    - name: win_domain_controller
-      tags: [ 'windows' , 'omain_controller' ]
