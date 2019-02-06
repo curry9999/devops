@@ -4,13 +4,21 @@
   gather_facts: false
   roles:
     - name: win_common
-      tags: [ 'windows' , 'common' ]
+      tags:
+        - windows
+        - common
 
     - name: win_update
-      tags: [ 'windows' , 'update' ]
+      tags:
+        - windows
+        - update
 
     - name: win_user
-      tags: [ 'windows' , 'user' ]
+      tags:
+        - windows
+        - user
 
     - name: win_psrepository
-      tags: [ 'windows' , 'psrepo' ]
+      tags:
+        - windows
+        - psrepo
