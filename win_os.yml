@@ -22,3 +22,8 @@
       tags:
         - windows
         - psrepo
+
+    - name: win_partition
+      tags:
+        - windows
+        - partition
