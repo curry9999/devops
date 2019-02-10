@@ -2,21 +2,21 @@
 - name: cfn template generate
   template:
     src: "{{ jinja2_path }}/{{ item.jinja2_name }}"
-    dest: "{{ stack_path }}/{{ item.name }}.yaml"
+    dest: "{{ stack_path }}/{{ item.stack_name }}.yaml"
 
 - name: get cloudformation info
   cloudformation_facts:
-    stack_name: "{{ item.name }}"
+    stack_name: "{{ item.stack_name }}"
   register: res
 
 - name: set cloudformation info
   set_fact:
-    cfn_state: "{{ ansible_facts['cloudformation'][ item.name ]['stack_description']['stack_status'] }}"
-  when: ansible_facts['cloudformation'][ item.name ] is defined
+    cfn_state: "{{ ansible_facts['cloudformation'][ item.stack_name ]['stack_description']['stack_status'] }}"
+  when: ansible_facts['cloudformation'][ item.stack_name ] is defined
 
 - name: remove a cloudformation stack
   cloudformation:
-    stack_name: "{{ item.name }}"
+    stack_name: "{{ item.stack_name }}"
     state: "absent"
   when: cfn_state is defined and cfn_state == "CREATE_FAILED"
 
@@ -29,11 +29,11 @@
 
 - name: create a cloudformation stack
   cloudformation:
-    stack_name: "{{ item.name }}"
+    stack_name: "{{ item.stack_name }}"
     state: "{{ state }}"
     region: "{{ region }}"
     disable_rollback: true
-    template: "{{ stack_path }}/{{ item.name }}.yaml"
+    template: "{{ stack_path }}/{{ item.stack_name }}.yaml"
     tags:
       Stack: "ansible-cloudformation"
   register: res
