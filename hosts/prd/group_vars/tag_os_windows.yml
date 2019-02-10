@@ -1,7 +1,7 @@
 ---
 # WinRM setting
 ansible_user: administrator
-ansible_password: Curry0000%
+ansible_password: "{{ password }}"
 ansible_port: 5986
 ansible_connection: winrm
 ansible_winrm_server_cert_validation: ignore
