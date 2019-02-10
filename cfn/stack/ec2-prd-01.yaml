@@ -3,7 +3,7 @@ Resources:
   Ec2Instance: 
     Type: AWS::EC2::Instance
     Properties: 
-      ImageId: ami-02fc48bb32777231e
+      ImageId: ami-068d819e778ed76e6
       KeyName: test_sample_dummy
       InstanceType: t2.medium
       NetworkInterfaces: 

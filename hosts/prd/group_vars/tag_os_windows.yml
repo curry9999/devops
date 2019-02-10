@@ -1,8 +1,4 @@
 ---
-# common
-state: "present"
-region: "ap-northeast-1"
-
 # WinRM setting
 ansible_user: administrator
 ansible_password: Curry0000%
@@ -10,7 +6,7 @@ ansible_port: 5986
 ansible_connection: winrm
 ansible_winrm_server_cert_validation: ignore
 
-# windows vars
+# Windows vars
 win_user:
   - username: "user1"
     password: "P@ssw0rd"
