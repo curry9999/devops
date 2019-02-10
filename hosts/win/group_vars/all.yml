@@ -18,8 +18,3 @@ win_user:
     password: "P@ssw0rd"
   - username: "user3"
     password: "P@ssw0rd"
-
-# Domain
-dns_domain_name: ansible.curry
-domain_admin_user: curry9999@ansible.curry
-domain_admin_password: P@ssw0rd!
