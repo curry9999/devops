@@ -1,6 +1,9 @@
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
-{% for line in item.linedata %} 
+{% for line in item.linedata %}
+########################################
+### Ec2Instance{{ line.num }}
+########################################
   Ec2Instance{{ line.num }}:
     Type: AWS::EC2::Instance
     Properties:

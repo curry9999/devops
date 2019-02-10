@@ -1,13 +1,15 @@
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
- 
-  Ec2Instance1: 
+########################################
+### Ec2Instance1
+########################################
+  Ec2Instance1:
     Type: AWS::EC2::Instance
-    Properties: 
+    Properties:
       ImageId: ami-068d819e778ed76e6
       KeyName: test_sample_dummy
       InstanceType: t2.medium
-      NetworkInterfaces: 
+      NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
       UserData:
@@ -41,14 +43,16 @@ Resources:
     DependsOn:
       - Ec2Instance1
       - EbsVolume1
- 
-  Ec2Instance2: 
+########################################
+### Ec2Instance2
+########################################
+  Ec2Instance2:
     Type: AWS::EC2::Instance
-    Properties: 
+    Properties:
       ImageId: ami-00ca08896c37c01d0
       KeyName: test_sample_dummy
       InstanceType: t2.medium
-      NetworkInterfaces: 
+      NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
       UserData:
