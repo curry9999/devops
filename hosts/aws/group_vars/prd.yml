@@ -7,7 +7,7 @@ ec2s:
       os: "windows"
       version: "2019"
       imageid: ami-02fc48bb32777231e
-      instance_type: t2.medium
+      instance_type: t3.medium
   template:
     jinja2_path: cfn/template
     jinja2_name: ec2_win.jinja2
