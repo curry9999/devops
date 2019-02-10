@@ -1,0 +1,7 @@
+---
+state: "present"
+region: "ap-northeast-1"
+keypair: "test_sample_dummy"
+password: Curry0000%
+
+ec2_prefix: "ec2"

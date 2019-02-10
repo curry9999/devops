@@ -1,0 +1,6 @@
+---
+- name: Resize previously created partition to it's maximum size and change it's drive letter to E
+  win_partition:
+    drive_letter: E
+    partition_size: -1
+    disk_number: 1

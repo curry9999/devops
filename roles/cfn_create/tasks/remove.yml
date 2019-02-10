@@ -1,0 +1,16 @@
+---
+- name: get cloudformation info
+  cloudformation_facts:
+    stack_name: "{{ item.name }}"
+  register: res
+
+- name: set cloudformation info
+  set_fact:
+    cfn_state: "{{ ansible_facts['cloudformation'][ item.name ]['stack_description']['stack_status'] }}"
+  when: ansible_facts['cloudformation'][ item.name ] is defined
+
+- name: remove a cloudformation stack
+  cloudformation:
+    stack_name: "{{ item.name }}"
+    state: "absent"
+  when: cfn_state is defined and cfn_state == "CREATE_FAILED"

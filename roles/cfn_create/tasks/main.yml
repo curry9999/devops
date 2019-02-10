@@ -1,0 +1,8 @@
+---
+- name: remove cloudformation stack
+  include_tasks: "{{ role_path }}/tasks/remove.yml"
+  with_items: "{{ cfn_var_name }}"
+
+- name: create cloudformation stack
+  include_tasks: "{{ role_path }}/tasks/{{ task_yml_name }}.yml"
+  with_items: "{{ cfn_var_name }}"
