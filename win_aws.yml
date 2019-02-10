@@ -4,16 +4,9 @@
   connection: local
   gather_facts: false
   roles:
-    - name: gen_cfn_template
-      tags:
-        - ec2
-        - template
-
-    - name: cfn_create
+    - name: aws_cfn_execute
       vars:
         - cfn_var_name: "{{ ec2s.record }}"
-          task_yml_name: "win"
-          cfn_yml_name: "ec2_win"
       tags:
         - ec2
         - windows

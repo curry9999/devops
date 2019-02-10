@@ -2,12 +2,9 @@
 # AWS
 ec2s:
   record:
-    - name: "{{ ec2_prefix }}-{{ env }}-01"
+    - name: "{{ env }}-ec2-01"
       os: "windows"
       version: "2019"
       imageid: ami-068d819e778ed76e6
       instance_type: t2.medium
-  template:
-    jinja2_path: cfn/template
-    jinja2_name: ec2_win.jinja2
-    stack_path: cfn/stack
+      jinja2_name: ec2_win.jinja2
