@@ -1,13 +1,13 @@
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
 {% for line in item.linedata %} 
-  Ec2Instance{{ line.num }}: 
+  Ec2Instance{{ line.num }}:
     Type: AWS::EC2::Instance
-    Properties: 
+    Properties:
       ImageId: {{ line.imageid }}
       KeyName: {{ keypair }}
       InstanceType: {{ line.instance_type }}
-      NetworkInterfaces: 
+      NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
       UserData:
