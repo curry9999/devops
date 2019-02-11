@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
 ########################################
-### Ec2Instance1
+### EC2 InstanceName prd-windows-2019
 ########################################
   Ec2Instance1:
     Type: AWS::EC2::Instance
@@ -44,7 +44,7 @@ Resources:
       - Ec2Instance1
       - EbsVolume1
 ########################################
-### Ec2Instance2
+### EC2 InstanceName prd-windows-2016
 ########################################
   Ec2Instance2:
     Type: AWS::EC2::Instance
