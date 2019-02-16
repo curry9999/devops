@@ -6,7 +6,7 @@
   roles:
     - name: aws_cfn_execute
       vars:
-        - cfn_var_name: "{{ ec2s.stacks }}"
+        - cfn_var_name: "{{ ec2win.stacks }}"
       tags:
         - ec2
         - windows
