@@ -3,7 +3,6 @@
 state: "present"
 region: "ap-northeast-1"
 env: "prd"
-keypair: "test_sample_dummy"
 password: Curry0000%
 
 # CloudFormation

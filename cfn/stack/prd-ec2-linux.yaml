@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+########################################
+### EC2 InstanceName prd-linux-ubuntu-1804
+########################################
+  Ec2Instance1:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-07ad4b1c3af1ea214
+      KeyName: kp_automation
+      InstanceType: t3.micro
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: os
+          Value: linux
+        - Key: version
+          Value: 2019
+        - Key: Name
+          Value: prd-linux-ubuntu-1804

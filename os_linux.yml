@@ -1,0 +1,12 @@
+---
+- name: CloudFormation Deploy
+  hosts: all
+  become: true
+  gather_facts: false
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - name: linux_common
+      tags:
+        - linux
+        - common

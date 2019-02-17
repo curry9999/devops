@@ -1,0 +1,12 @@
+---
+- name: install aptitude
+  apt:
+    name: aptitude
+
+- name: upgrade all packages
+  apt:
+    update_cache: false
+
+- name: update all packages
+  apt:
+    upgrade: dist

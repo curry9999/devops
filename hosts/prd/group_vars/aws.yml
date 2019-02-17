@@ -1,22 +1,35 @@
 ---
 # AWS
 ec2s:
-  win_stack:
-    - stack_name: "{{ env }}-ec2-win"
+  windows_stack:
+    - stack_name: "{{ env }}-ec2-windows"
       jinja2_name: ec2.jinja2
       linedata:
         - name: "{{ env }}-windows-2019"
+          keypair: "test_sample_dummy"
           os: windows
           version: 2019
           imageid: ami-068d819e778ed76e6
           instance_type: t2.medium
         - name: "{{ env }}-windows-2016"
+          keypair: "test_sample_dummy"
           os: windows
           version: 2016
           imageid: ami-00ca08896c37c01d0
           instance_type: t2.medium
         - name: "{{ env }}-windows-2012R2"
+          keypair: "test_sample_dummy"
           os: windows
           version: 2012R2
           imageid: ami-01847ac7578ef1007
           instance_type: t2.medium
+  linux_stack:
+    - stack_name: "{{ env }}-ec2-linux"
+      jinja2_name: ec2.jinja2
+      linedata:
+        - name: "{{ env }}-linux-ubuntu-1804"
+          keypair: kp_automation
+          os: linux
+          version: 2019
+          imageid: ami-07ad4b1c3af1ea214
+          instance_type: t3.micro
