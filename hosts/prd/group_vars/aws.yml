@@ -1,8 +1,8 @@
 ---
 # AWS
-ec2win:
-  stacks:
-    - stack_name: "{{ env }}-ec2"
+ec2s:
+  win_stack:
+    - stack_name: "{{ env }}-ec2-win"
       jinja2_name: ec2.jinja2
       linedata:
         - name: "{{ env }}-windows-2019"
@@ -10,13 +10,13 @@ ec2win:
           version: 2019
           imageid: ami-068d819e778ed76e6
           instance_type: t2.medium
-#        - name: "{{ env }}-windows-2016"
-#          os: "windows"
-#          version: "2016"
-#          imageid: ami-00ca08896c37c01d0
-#          instance_type: t2.medium
-#        - name: "{{ env }}-windows-2012R2"
-#          os: "windows"
-#          version: "2012R2"
-#          imageid: ami-01847ac7578ef1007
-#          instance_type: t2.medium
+        - name: "{{ env }}-windows-2016"
+          os: windows
+          version: 2016
+          imageid: ami-00ca08896c37c01d0
+          instance_type: t2.medium
+        - name: "{{ env }}-windows-2012R2"
+          os: windows
+          version: 2012R2
+          imageid: ami-01847ac7578ef1007
+          instance_type: t2.medium

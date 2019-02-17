@@ -5,6 +5,7 @@ Resources:
 ########################################
 ### EC2 InstanceName {{ line.name }}
 ########################################
+{% if line.os == "windows" %}
   Ec2Instance{{ num }}:
     Type: AWS::EC2::Instance
     Properties:
@@ -45,4 +46,5 @@ Resources:
     DependsOn:
       - Ec2Instance{{ num }}
       - EbsVolume{{ num }}
+{% endif %}
 {% endfor %}

@@ -1,0 +1,131 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+########################################
+### EC2 InstanceName prd-windows-2019
+########################################
+  Ec2Instance1:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-068d819e778ed76e6
+      KeyName: test_sample_dummy
+      InstanceType: t2.medium
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+      UserData:
+        Fn::Base64: !Sub |
+          <powershell>
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile ConfigureRemotingForAnsible.ps1
+          powershell -ExecutionPolicy RemoteSigned .\ConfigureRemotingForAnsible.ps1
+          $admin = [ADSI]("WinNT://./administrator, user")
+          $admin.SetPassword("Curry0000%")
+          </powershell>
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: os
+          Value: windows
+        - Key: version
+          Value: 2019
+        - Key: Name
+          Value: prd-windows-2019
+  EbsVolume1:
+    Type: AWS::EC2::Volume
+    Properties:
+      AvailabilityZone: !GetAtt Ec2Instance1.AvailabilityZone
+      Size: 10
+  MountPoint1:
+    Type: AWS::EC2::VolumeAttachment
+    Properties:
+      Device: xvdf
+      InstanceId: !Ref Ec2Instance1
+      VolumeId: !Ref EbsVolume1
+    DependsOn:
+      - Ec2Instance1
+      - EbsVolume1
+########################################
+### EC2 InstanceName prd-windows-2016
+########################################
+  Ec2Instance2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-00ca08896c37c01d0
+      KeyName: test_sample_dummy
+      InstanceType: t2.medium
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+      UserData:
+        Fn::Base64: !Sub |
+          <powershell>
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile ConfigureRemotingForAnsible.ps1
+          powershell -ExecutionPolicy RemoteSigned .\ConfigureRemotingForAnsible.ps1
+          $admin = [ADSI]("WinNT://./administrator, user")
+          $admin.SetPassword("Curry0000%")
+          </powershell>
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: os
+          Value: windows
+        - Key: version
+          Value: 2016
+        - Key: Name
+          Value: prd-windows-2016
+  EbsVolume2:
+    Type: AWS::EC2::Volume
+    Properties:
+      AvailabilityZone: !GetAtt Ec2Instance2.AvailabilityZone
+      Size: 10
+  MountPoint2:
+    Type: AWS::EC2::VolumeAttachment
+    Properties:
+      Device: xvdf
+      InstanceId: !Ref Ec2Instance2
+      VolumeId: !Ref EbsVolume2
+    DependsOn:
+      - Ec2Instance2
+      - EbsVolume2
+########################################
+### EC2 InstanceName prd-windows-2012R2
+########################################
+  Ec2Instance3:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-01847ac7578ef1007
+      KeyName: test_sample_dummy
+      InstanceType: t2.medium
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+      UserData:
+        Fn::Base64: !Sub |
+          <powershell>
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile ConfigureRemotingForAnsible.ps1
+          powershell -ExecutionPolicy RemoteSigned .\ConfigureRemotingForAnsible.ps1
+          $admin = [ADSI]("WinNT://./administrator, user")
+          $admin.SetPassword("Curry0000%")
+          </powershell>
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: os
+          Value: windows
+        - Key: version
+          Value: 2012R2
+        - Key: Name
+          Value: prd-windows-2012R2
+  EbsVolume3:
+    Type: AWS::EC2::Volume
+    Properties:
+      AvailabilityZone: !GetAtt Ec2Instance3.AvailabilityZone
+      Size: 10
+  MountPoint3:
+    Type: AWS::EC2::VolumeAttachment
+    Properties:
+      Device: xvdf
+      InstanceId: !Ref Ec2Instance3
+      VolumeId: !Ref EbsVolume3
+    DependsOn:
+      - Ec2Instance3
+      - EbsVolume3
