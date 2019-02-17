@@ -20,5 +20,5 @@
   roles:
     - name: linux_pids
       tags:
+        - linux
         - pids
-        - common
