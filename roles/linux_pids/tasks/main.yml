@@ -1,0 +1,7 @@
+---
+- name: get pid
+  pids:
+      name: python
+  register: res
+
+- debug: msg="{{ res }}"

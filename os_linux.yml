@@ -10,3 +10,8 @@
       tags:
         - linux
         - common
+
+    - name: linux_pids
+      tags:
+        - pids
+        - common
