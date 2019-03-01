@@ -1,0 +1,6 @@
+---
+- name: Add string to AWS Secrets Manager
+  aws_secret:
+    name: test_secret_string01
+    secret_type: string
+    secret: secret string01
