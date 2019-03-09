@@ -1,0 +1,7 @@
+---
+- name: execute pip_package_info
+  pip_package_info:
+    clients: /usr/bin/pip3
+  register: res
+
+- debug: msg="{{ res }}"

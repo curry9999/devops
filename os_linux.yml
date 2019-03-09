@@ -22,3 +22,8 @@
       tags:
         - linux
         - pids
+
+    - name: linux_pip_package_info
+      tags:
+        - linux
+        - pip_package_info

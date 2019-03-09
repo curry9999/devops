@@ -1,5 +1,5 @@
 ---
-- name: CloudFormation Windows EC2
+- name: CloudFormation Linux EC2
   hosts: all
   connection: local
   gather_facts: false
