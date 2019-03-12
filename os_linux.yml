@@ -27,3 +27,8 @@
       tags:
         - linux
         - pip_package_info
+
+    - name: linux_gather_facts
+      tags:
+        - linux
+        - gather_facts
