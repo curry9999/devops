@@ -32,4 +32,4 @@ ec2s:
           os: linux
           version: 2019
           imageid: ami-07ad4b1c3af1ea214
-          instance_type: t3.micro
+          instance_type: t2.micro
