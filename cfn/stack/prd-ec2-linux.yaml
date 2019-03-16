@@ -8,7 +8,7 @@ Resources:
     Properties:
       ImageId: ami-07ad4b1c3af1ea214
       KeyName: kp_automation
-      InstanceType: t3.micro
+      InstanceType: t2.micro
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
