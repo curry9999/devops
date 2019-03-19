@@ -4,11 +4,15 @@ import { CdkStackEc2 } from '../lib/ec2';
 
 const app = new cdk.App();
 
-// Stack EC2
-const ec2 = new CdkStackEc2(app, 'prd-ec2-linux');
-ec2.node.apply(new cdk.Tag('env', 'prd'));
-ec2.node.apply(new cdk.Tag('os', 'linux'));
-ec2.node.apply(new cdk.Tag('version', '2019'));
-ec2.node.apply(new cdk.Tag('Name', 'prd-linux-ubuntu-1804'));
+// Stack EC2 stg
+const stg = new CdkStackEc2(app, 'stg-ec2-linux');
+stg.node.apply(new cdk.Tag('env', 'stg'));
+stg.node.apply(new cdk.Tag('Name', 'stg-linux-ubuntu-1804'));
 
+// Stack EC2 prd
+const prd = new CdkStackEc2(app, 'prd-ec2-linux');
+prd.node.apply(new cdk.Tag('env', 'prd'));
+prd.node.apply(new cdk.Tag('Name', 'prd-linux-ubuntu-1804'));
+
+// Run
 app.run();
