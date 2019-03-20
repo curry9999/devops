@@ -1,3 +1,6 @@
 {
+  "context": {
+    "key_pair": "kp_wai"
+  },
   "app": "node bin/cdk.js"
 }

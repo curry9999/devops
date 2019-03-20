@@ -9,7 +9,7 @@ export class CdkStackEc2 extends cdk.Stack {
       new ec2.CfnInstance(this, 'Ec2Instance' + i, {
           imageId: 'ami-07ad4b1c3af1ea214',
           instanceType: 't2.micro',
-          keyName: 'kp_wai',
+          keyName: this.node.getContext("key_pair"),
           networkInterfaces: [
             {
               deviceIndex: '0',
