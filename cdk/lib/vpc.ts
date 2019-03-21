@@ -14,11 +14,6 @@ export class CdkStackVpc extends cdk.Stack {
           name: 'Ingress',
           subnetType: ec2.SubnetType.Public,
         },
-        {
-          cidrMask: 24,
-          name: 'Application',
-          subnetType: ec2.SubnetType.Private,
-        },
       ],
     });
 
