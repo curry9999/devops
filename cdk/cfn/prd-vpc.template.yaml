@@ -1,0 +1,217 @@
+Resources:
+  VPCB9E5F0B4:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/21
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+      InstanceTenancy: default
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: Name
+          Value: prd-vpc/VPC
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/Resource
+  VPCIngressSubnet1Subnet4257CD65:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.0.0/24
+      VpcId:
+        Ref: VPCB9E5F0B4
+      AvailabilityZone: ap-northeast-1a
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: Name
+          Value: prd-vpc/VPC/IngressSubnet1
+        - Key: aws-cdk:subnet-name
+          Value: Ingress
+        - Key: aws-cdk:subnet-type
+          Value: Public
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet1/Subnet
+  VPCIngressSubnet1RouteTable9BE753A6:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:
+        Ref: VPCB9E5F0B4
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: Name
+          Value: prd-vpc/VPC/IngressSubnet1
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet1/RouteTable
+  VPCIngressSubnet1RouteTableAssociationCAFE4089:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: VPCIngressSubnet1RouteTable9BE753A6
+      SubnetId:
+        Ref: VPCIngressSubnet1Subnet4257CD65
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet1/RouteTableAssociation
+  VPCIngressSubnet1DefaultRouteFE025494:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId:
+        Ref: VPCIngressSubnet1RouteTable9BE753A6
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId:
+        Ref: VPCIGWB7E252D3
+    DependsOn:
+      - VPCVPCGW99B986DC
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet1/DefaultRoute
+  VPCIngressSubnet2SubnetE0EA735B:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.1.0/24
+      VpcId:
+        Ref: VPCB9E5F0B4
+      AvailabilityZone: ap-northeast-1c
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: Name
+          Value: prd-vpc/VPC/IngressSubnet2
+        - Key: aws-cdk:subnet-name
+          Value: Ingress
+        - Key: aws-cdk:subnet-type
+          Value: Public
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet2/Subnet
+  VPCIngressSubnet2RouteTableDFE1B4BC:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:
+        Ref: VPCB9E5F0B4
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: Name
+          Value: prd-vpc/VPC/IngressSubnet2
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet2/RouteTable
+  VPCIngressSubnet2RouteTableAssociationB244DE25:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: VPCIngressSubnet2RouteTableDFE1B4BC
+      SubnetId:
+        Ref: VPCIngressSubnet2SubnetE0EA735B
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet2/RouteTableAssociation
+  VPCIngressSubnet2DefaultRoute9FF8300E:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId:
+        Ref: VPCIngressSubnet2RouteTableDFE1B4BC
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId:
+        Ref: VPCIGWB7E252D3
+    DependsOn:
+      - VPCVPCGW99B986DC
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet2/DefaultRoute
+  VPCIngressSubnet3Subnet5B03B6AE:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.2.0/24
+      VpcId:
+        Ref: VPCB9E5F0B4
+      AvailabilityZone: ap-northeast-1d
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: Name
+          Value: prd-vpc/VPC/IngressSubnet3
+        - Key: aws-cdk:subnet-name
+          Value: Ingress
+        - Key: aws-cdk:subnet-type
+          Value: Public
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet3/Subnet
+  VPCIngressSubnet3RouteTableBA29E68D:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:
+        Ref: VPCB9E5F0B4
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: Name
+          Value: prd-vpc/VPC/IngressSubnet3
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet3/RouteTable
+  VPCIngressSubnet3RouteTableAssociationF8544212:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: VPCIngressSubnet3RouteTableBA29E68D
+      SubnetId:
+        Ref: VPCIngressSubnet3Subnet5B03B6AE
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet3/RouteTableAssociation
+  VPCIngressSubnet3DefaultRouteD4DCD60F:
+    Type: AWS::EC2::Route
+    Properties:
+      RouteTableId:
+        Ref: VPCIngressSubnet3RouteTableBA29E68D
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId:
+        Ref: VPCIGWB7E252D3
+    DependsOn:
+      - VPCVPCGW99B986DC
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IngressSubnet3/DefaultRoute
+  VPCIGWB7E252D3:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: Name
+          Value: prd-vpc/VPC
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/IGW
+  VPCVPCGW99B986DC:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId:
+        Ref: VPCB9E5F0B4
+      InternetGatewayId:
+        Ref: VPCIGWB7E252D3
+    Metadata:
+      aws:cdk:path: prd-vpc/VPC/VPCGW
+  SecurityGroupDD263621:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow ssh access to ec2 instances
+      SecurityGroupEgress:
+        - CidrIp: 0.0.0.0/0
+          Description: Allow all outbound traffic by default
+          IpProtocol: "-1"
+      SecurityGroupIngress:
+        - CidrIp: 0.0.0.0/0
+          Description: allow ssh access from the world
+          FromPort: 22
+          IpProtocol: tcp
+          ToPort: 22
+      Tags:
+        - Key: env
+          Value: prd
+        - Key: Name
+          Value: prd-vpc
+      VpcId:
+        Ref: VPCB9E5F0B4
+    Metadata:
+      aws:cdk:path: prd-vpc/SecurityGroup/Resource
+  CDKMetadata:
+    Type: AWS::CDK::Metadata
+    Properties:
+      Modules: aws-cdk=0.26.0,@aws-cdk/aws-ec2=0.25.1,@aws-cdk/cdk=0.25.1,@aws-cdk/cx-api=0.25.1,jsii-runtime=node.js/v11.10.1
