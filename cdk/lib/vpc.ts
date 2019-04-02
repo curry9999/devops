@@ -23,6 +23,8 @@ export class CdkStackVpc extends cdk.Stack {
       description: 'Allow ssh access to ec2 instances',
       allowAllOutbound: true   // Can be set to false
     });
+    
+    // Create Security Group
     mySecurityGroup.addIngressRule(new ec2.AnyIPv4(), new ec2.TcpPort(22), 'allow ssh access from the world');
   }
 }
