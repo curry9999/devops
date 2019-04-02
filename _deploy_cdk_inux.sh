@@ -7,8 +7,8 @@ cd cdk
 npm run build
 test $? -ne 0 && exit 1
 
-#cdk synth ${OPTIONS}
-#test $? -ne 0 && exit 1
+cdk synth ${OPTIONS}
+test $? -ne 0 && exit 1
 
 #cdk diff ${OPTIONS}
 
