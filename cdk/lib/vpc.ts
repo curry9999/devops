@@ -27,12 +27,6 @@ export class CdkStackVpc extends cdk.Stack {
     // Create Security Group
     mySecurityGroup.addIngressRule(new ec2.AnyIPv4(), new ec2.TcpPort(22), 'allow ssh access from the world');
 
-    // Get Subnet
-    let subnetid;
-    for (let subnet of vpc.publicSubnets) {
-      subnetid = subnet.subnetId;
-    }
-
     // Create EC2 Instance
     new ec2.CfnInstance(this, 'Instance' , {
       imageId: 'ami-07ad4b1c3af1ea214',
@@ -42,7 +36,7 @@ export class CdkStackVpc extends cdk.Stack {
         {
           deviceIndex: '0',
           associatePublicIpAddress: true,
-          subnetId: subnetid,
+          subnetId: vpc.publicSubnets[0].subnetId,
           groupSet: [
             mySecurityGroup.securityGroupId
           ]
