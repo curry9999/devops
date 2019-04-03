@@ -43,6 +43,9 @@ export class CdkStackVpc extends cdk.Stack {
           deviceIndex: '0',
           associatePublicIpAddress: true,
           subnetId: subnetid,
+          groupSet: [
+            mySecurityGroup.securityGroupId
+          ]
         }
       ]
     });
