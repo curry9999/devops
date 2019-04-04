@@ -1,18 +1,19 @@
 #!/bin/bash
 
 OPTIONS=$@
+STACK_NAME=prd-ec2-linux
 
 cd cdk
 
 npm run build
 test $? -ne 0 && exit 1
 
-cdk synth ${OPTIONS}
+cdk synth ${STACK_NAME}
 test $? -ne 0 && exit 1
 
-#cdk diff ${OPTIONS}
+#cdk diff ${STACK_NAME}
 
-cdk deploy ${OPTIONS}
+cdk deploy ${STACK_NAME} -f
 test $? -ne 0 && exit 1
 
 cd ../
