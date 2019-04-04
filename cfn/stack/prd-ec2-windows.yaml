@@ -6,7 +6,7 @@ Resources:
   Ec2Instance1:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-068d819e778ed76e6
+      ImageId: ami-0080a567a9989e1d5
       KeyName: kp_wai
       InstanceType: t2.medium
       NetworkInterfaces:
