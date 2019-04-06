@@ -9,7 +9,7 @@ ec2s:
           keypair: kp_wai
           os: windows
           version: 2019
-          imageid: ami-0080a567a9989e1d5
+          imageid: ami-06b2e1396e60a46be
           instance_type: t2.medium
 #        - name: "{{ env }}-windows-2016"
 #          keypair: kp_wai

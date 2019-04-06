@@ -34,3 +34,8 @@
       tags:
         - windows
         - partition
+
+    - name: win_hosts
+      tags:
+        - windows
+        - hosts
