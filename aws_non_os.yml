@@ -1,0 +1,10 @@
+---
+- name: AWS non os
+  hosts: all
+  connection: local
+  gather_facts: false
+  roles:
+    - name: aws_secret
+      tags:
+        - aws
+        - aws_secret

@@ -1,0 +1,12 @@
+---
+- name: CloudFormation Windows EC2
+  hosts: all
+  connection: local
+  gather_facts: false
+  roles:
+    - name: aws_cfn_execute
+      vars:
+        - cfn_var_name: "{{ ec2s.windows_stack }}"
+      tags:
+        - ec2
+        - windows

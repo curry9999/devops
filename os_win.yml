@@ -1,0 +1,36 @@
+---
+- name: CloudFormation Windows Deploy
+  hosts: all
+  gather_facts: true
+  roles:
+    - name: win_common
+      tags:
+        - windows
+        - common
+
+    - name: win_update
+      tags:
+        - windows
+        - update
+
+    - name: win_user
+      tags:
+        - windows
+        - user
+
+    - name: win_install_powershell5
+      when: ansible_distribution_major_version == "6" and ansible_powershell_version < 5
+      tags:
+        - windows
+        - powershell5
+
+    - name: win_psrepository
+      tags:
+        - windows
+        - psrepo
+
+    - name: win_partition
+      when: ansible_distribution_major_version == "10"
+      tags:
+        - windows
+        - partition

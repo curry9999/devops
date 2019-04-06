@@ -1,0 +1,69 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+{% for line in item.linedata %}
+{% set num = loop.index %}
+########################################
+### EC2 InstanceName {{ line.name }}
+########################################
+{% if line.os == "windows" %}
+  Ec2Instance{{ num }}:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: {{ line.imageid }}
+      KeyName: {{ line.keypair }}
+      InstanceType: {{ line.instance_type }}
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+      UserData:
+        Fn::Base64: !Sub |
+          <powershell>
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1 -OutFile ConfigureRemotingForAnsible.ps1
+          powershell -ExecutionPolicy RemoteSigned .\ConfigureRemotingForAnsible.ps1
+          $admin = [ADSI]("WinNT://./administrator, user")
+          $admin.SetPassword("{{ password }}")
+          </powershell>
+      Tags:
+        - Key: env
+          Value: {{ env }}
+        - Key: os
+          Value: {{ line.os }}
+        - Key: version
+          Value: {{ line.version }}
+        - Key: Name
+          Value: {{ line.name }}
+  EbsVolume{{ num }}:
+    Type: AWS::EC2::Volume
+    Properties:
+      AvailabilityZone: !GetAtt Ec2Instance{{ num }}.AvailabilityZone
+      Size: 10
+  MountPoint{{ num }}:
+    Type: AWS::EC2::VolumeAttachment
+    Properties:
+      Device: xvdf
+      InstanceId: !Ref Ec2Instance{{ num }}
+      VolumeId: !Ref EbsVolume{{ num }}
+    DependsOn:
+      - Ec2Instance{{ num }}
+      - EbsVolume{{ num }}
+{% else %}
+  Ec2Instance{{ num }}:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: {{ line.imageid }}
+      KeyName: {{ line.keypair }}
+      InstanceType: {{ line.instance_type }}
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+      Tags:
+        - Key: env
+          Value: {{ env }}
+        - Key: os
+          Value: {{ line.os }}
+        - Key: version
+          Value: {{ line.version }}
+        - Key: Name
+          Value: {{ line.name }}
+{% endif %}
+{% endfor %}

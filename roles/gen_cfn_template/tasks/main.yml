@@ -1,6 +1,0 @@
----
-- name: cfn template generate
-  template:
-    src: "{{ ec2s.template.jinja2_path }}/{{ ec2s.template.jinja2_name }}"
-    dest: "{{ ec2s.template.stack_path }}/{{ item.name }}.yaml"
-  with_items: "{{ ec2s.record }}"

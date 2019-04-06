@@ -1,0 +1,16 @@
+---
+- name: exist pid
+  pids:
+      name: kswapd0
+  register: res
+
+- name: debug exist pid
+  debug: msg="{{ res }}"
+
+- name: not exist pid
+  pids:
+      name: kswapd01111
+  register: res
+
+- name: debug not exist pid
+  debug: msg="{{ res }}"
