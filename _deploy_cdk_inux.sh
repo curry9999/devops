@@ -5,6 +5,9 @@ STACK_NAME=prd-ec2-linux
 
 cd cdk
 
+npm install
+test $? -ne 0 && exit 1
+
 npm run build
 test $? -ne 0 && exit 1
 
