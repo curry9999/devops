@@ -19,5 +19,9 @@
   when: ansible_disks[disk_number].guid is none
 
 - name: format disk
-  win_shell: "Format-Volume -DriveLetter {{ drive_letter }} "
+  win_format:
+    drive_letter: "{{ drive_letter }}"
+    file_system: NTFS
+    new_label: Formatted
+    full: True
   when: ansible_disks[disk_number].guid is none
