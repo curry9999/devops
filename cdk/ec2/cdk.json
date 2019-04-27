@@ -1,0 +1,8 @@
+{
+  "context": {
+    "key_pair": "kp_wai",
+    "instance_type": "t2.micro",
+    "image_id": "ami-0eb48a19a8d81e20b"
+  },
+  "app": "node index"
+}

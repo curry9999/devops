@@ -2,8 +2,13 @@
 
 OPTIONS=$@
 STACK_NAME=prd-ec2-linux
+CURRENT_DIR=`pwd`
+CDK_DIR=cdk/ec2/
 
-cd cdk
+cd ${CDK_DIR}
+
+npm install
+test $? -ne 0 && exit 1
 
 npm run build
 test $? -ne 0 && exit 1
@@ -11,16 +16,12 @@ test $? -ne 0 && exit 1
 cdk synth ${STACK_NAME}
 test $? -ne 0 && exit 1
 
-#cdk diff ${STACK_NAME}
-
 cdk deploy ${STACK_NAME} -f
 test $? -ne 0 && exit 1
 
-cd ../
+cd ${CURRENT_DIR}
 
 ansible-playbook -i hosts/prd/ os_linux.yml -l tag_os_linux ${OPTIONS}
 test $? -ne 0 && exit 1
 
 exit 0
-
-
