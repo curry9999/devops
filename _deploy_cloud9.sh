@@ -2,7 +2,6 @@
 
 OPTIONS=$@
 STACK_NAME=prd-cloud9
-CURRENT_DIR=`pwd`
 CDK_DIR=cdk/cloud9/
 
 cd ${CDK_DIR}
