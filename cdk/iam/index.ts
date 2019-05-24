@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+import cdk = require('@aws-cdk/cdk');
+import iam = require('@aws-cdk/aws-iam');
+
+export class CdkStackIam extends cdk.Stack {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+    
+    const groups = new iam.CfnGroup(this, 'IamGroup', {
+      groupName: "gruop-curry9999"
+    });
+
+    new iam.CfnUser(this, 'IamUser', {
+      userName: "user-curry9999",
+      groups: [
+          groups.groupName
+        ]
+    });
+  }
+}
+
+const app = new cdk.App();
+new CdkStackIam(app, 'prd-iam');
+app.run();
