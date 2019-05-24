@@ -6,8 +6,15 @@ export class CdkStackIam extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     
-    new iam.CfnGroup(this, 'IamGroup', {
+    const groups = new iam.CfnGroup(this, 'IamGroup', {
       groupName: "gruop-curry9999"
+    });
+
+    new iam.CfnUser(this, 'IamUser', {
+      userName: "user-curry9999",
+      groups: [
+          groups.groupName
+        ]
     });
   }
 }
