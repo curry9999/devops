@@ -6,7 +6,7 @@ export class CdkStackIam extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     
-    new dynamodb.CfnTable(this, 'Table', {
+    new dynamodb.CfnTable(this, 'TableMultiIndex', {
       attributeDefinitions: [
         {
           attributeName: "col1",
@@ -17,7 +17,11 @@ export class CdkStackIam extends cdk.Stack {
         },{
           attributeName: "col3",
           attributeType: "N"
-        }],
+        },{
+          attributeName: "col4",
+          attributeType: "S"
+        }
+      ],
       keySchema: [
         {
           attributeName: "col1",
@@ -25,29 +29,33 @@ export class CdkStackIam extends cdk.Stack {
         },{
           attributeName: "col2",
           keyType: "RANGE"
-        }],
-      globalSecondaryIndexes: [{
-        indexName: "index1",
-        keySchema: [
-            {
-              attributeName: "col3",
-              keyType: "HASH"
-            },{
-              attributeName: "col2",
-              keyType: "RANGE"
-            }
-          ],
-        projection: {
-          nonKeyAttributes: [
-              "col1"
-            ],
-          projectionType: "INCLUDE"
-        },
-        provisionedThroughput: {
-          readCapacityUnits: 1,
-          writeCapacityUnits: 1
         }
-      }],
+      ],
+      globalSecondaryIndexes: [
+        {
+          indexName: "gindex1",
+          keySchema: [
+              {
+                attributeName: "col3",
+                keyType: "HASH"
+              },{
+                attributeName: "col4",
+                keyType: "RANGE"
+              }
+          ],
+          projection: {
+            nonKeyAttributes: [
+                "col1",
+                "col2"
+            ],
+            projectionType: "INCLUDE"
+          },
+          provisionedThroughput: {
+            readCapacityUnits: 1,
+            writeCapacityUnits: 1
+          }
+        }
+      ],
       provisionedThroughput: {
         readCapacityUnits: 1,
         writeCapacityUnits: 1
