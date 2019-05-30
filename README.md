@@ -6,6 +6,8 @@ It contains code necessary for DevOps deployment.
    - AWS CDK
 - cfn
    - CloudFormation template
+- exec
+   - Execute file name
 - hosts
    - ansible inventory
 - roles
