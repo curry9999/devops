@@ -31,10 +31,10 @@
   },
   "runtime": {
     "libraries": {
-      "@aws-cdk/cdk": "0.34.0",
-      "@aws-cdk/cx-api": "0.34.0",
-      "@aws-cdk/aws-iam": "0.34.0",
-      "@aws-cdk/region-info": "0.34.0",
+      "@aws-cdk/cdk": "0.35.0",
+      "@aws-cdk/cx-api": "0.35.0",
+      "@aws-cdk/aws-iam": "0.35.0",
+      "@aws-cdk/region-info": "0.35.0",
       "jsii-runtime": "node.js/v8.16.0"
     }
   }
