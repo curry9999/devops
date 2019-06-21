@@ -1,0 +1,9 @@
+---
+- name: Ansible 2.9 Verification
+  hosts: all
+  connection: local
+  gather_facts: false
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - name: aws_dms_endpoint

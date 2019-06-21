@@ -1,0 +1,41 @@
+{
+  "version": "0.34.0",
+  "artifacts": {
+    "prd-iam": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://522299100431/ap-northeast-1",
+      "properties": {
+        "templateFile": "prd-iam.template.json"
+      },
+      "metadata": {
+        "/prd-iam/IamGroup": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IamGroup",
+            "trace": [
+              "new CdkStackIam (/home/ubuntu/environment/devops/cdk/iam/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/iam/index.js:16:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/cdk": "0.35.0",
+      "@aws-cdk/cx-api": "0.35.0",
+      "@aws-cdk/aws-iam": "0.35.0",
+      "@aws-cdk/region-info": "0.35.0",
+      "jsii-runtime": "node.js/v8.16.0"
+    }
+  }
+}

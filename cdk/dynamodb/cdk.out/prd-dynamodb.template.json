@@ -1,0 +1,71 @@
+{
+  "Resources": {
+    "TableMultiIndex": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "col1",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "col2",
+            "KeyType": "RANGE"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "col1",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "col2",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "col3",
+            "AttributeType": "N"
+          },
+          {
+            "AttributeName": "col4",
+            "AttributeType": "S"
+          }
+        ],
+        "GlobalSecondaryIndexes": [
+          {
+            "IndexName": "gindex1",
+            "KeySchema": [
+              {
+                "AttributeName": "col3",
+                "KeyType": "HASH"
+              },
+              {
+                "AttributeName": "col4",
+                "KeyType": "RANGE"
+              }
+            ],
+            "Projection": {
+              "NonKeyAttributes": [
+                "col1",
+                "col2"
+              ],
+              "ProjectionType": "INCLUDE"
+            },
+            "ProvisionedThroughput": {
+              "ReadCapacityUnits": 1,
+              "WriteCapacityUnits": 1
+            }
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 1,
+          "WriteCapacityUnits": 1
+        },
+        "TableName": "table1"
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-dynamodb/TableMultiIndex"
+      }
+    }
+  }
+}
