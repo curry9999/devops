@@ -26,6 +26,9 @@
             "Value": "prd-linux-ubuntu-1804"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-ec2-linux/Ec2Instance1"
       }
     }
   }

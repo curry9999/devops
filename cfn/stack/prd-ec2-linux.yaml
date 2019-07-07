@@ -1,14 +1,10 @@
-AWSTemplateFormatVersion: 2010-09-09
 Resources:
-########################################
-### EC2 InstanceName prd-linux-ubuntu-1804
-########################################
   Ec2Instance1:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0eb48a19a8d81e20b
-      KeyName: keypair_cloud9
       InstanceType: t2.micro
+      KeyName: keypair_cloud9
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: "0"

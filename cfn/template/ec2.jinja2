@@ -1,10 +1,6 @@
-AWSTemplateFormatVersion: 2010-09-09
 Resources:
 {% for line in item.linedata %}
 {% set num = loop.index %}
-########################################
-### EC2 InstanceName {{ line.name }}
-########################################
 {% if line.os == "windows" %}
   Ec2Instance{{ num }}:
     Type: AWS::EC2::Instance
@@ -51,8 +47,8 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: {{ line.imageid }}
-      KeyName: {{ line.keypair }}
       InstanceType: {{ line.instance_type }}
+      KeyName: {{ line.keypair }}
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: "0"
