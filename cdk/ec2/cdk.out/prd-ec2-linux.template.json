@@ -1,6 +1,6 @@
 {
   "Resources": {
-    "Instance1": {
+    "Ec2Instance1": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
         "ImageId": "ami-0eb48a19a8d81e20b",
@@ -18,17 +18,14 @@
             "Value": "prd"
           },
           {
-            "Key": "Name",
-            "Value": "prd-linux-ubuntu-1804"
-          },
-          {
             "Key": "os",
             "Value": "linux"
+          },
+          {
+            "Key": "Name",
+            "Value": "prd-linux-ubuntu-1804"
           }
         ]
-      },
-      "Metadata": {
-        "aws:cdk:path": "prd-ec2-linux/Instance1"
       }
     }
   }

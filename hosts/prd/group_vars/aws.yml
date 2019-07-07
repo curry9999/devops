@@ -30,6 +30,5 @@ ec2s:
         - name: "{{ env }}-linux-ubuntu-1804"
           keypair: keypair_cloud9
           os: linux
-          version: 2019
           imageid: ami-0eb48a19a8d81e20b
           instance_type: t2.micro

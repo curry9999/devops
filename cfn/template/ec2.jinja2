@@ -55,14 +55,12 @@ Resources:
       InstanceType: {{ line.instance_type }}
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
-          DeviceIndex: 0
+          DeviceIndex: "0"
       Tags:
         - Key: env
           Value: {{ env }}
         - Key: os
           Value: {{ line.os }}
-        - Key: version
-          Value: {{ line.version }}
         - Key: Name
           Value: {{ line.name }}
 {% endif %}

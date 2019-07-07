@@ -13,10 +13,10 @@ test $? -ne 0 && exit 1
 npm run build
 test $? -ne 0 && exit 1
 
-cdk synth ${STACK_NAME}
+cdk synth ${STACK_NAME} --path-metadata false --version-reporting false
 test $? -ne 0 && exit 1
 
-cdk deploy ${STACK_NAME} -f
+cdk deploy ${STACK_NAME} -f --path-metadata false --version-reporting false
 test $? -ne 0 && exit 1
 
 cd ${CURRENT_DIR}
