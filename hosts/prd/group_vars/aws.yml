@@ -28,7 +28,7 @@ ec2s:
       jinja2_name: ec2.jinja2
       linedata:
         - name: "{{ env }}-linux-ubuntu-1804"
-          keypair: kp_wai
+          keypair: keypair_cloud9
           os: linux
           version: 2019
           imageid: ami-07ad4b1c3af1ea214
