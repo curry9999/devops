@@ -2,6 +2,7 @@
 - name: upgrade all packages
   apt:
     update_cache: true
+  changed_when: false
 
 - name: update all packages
   apt:
