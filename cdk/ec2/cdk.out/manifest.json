@@ -1,0 +1,78 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "prd-ec2-linux": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "prd-ec2-linux.template.json"
+      },
+      "metadata": {
+        "/prd-ec2-linux": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "env",
+                "Value": "prd"
+              },
+              {
+                "Key": "Name",
+                "Value": "prd-linux-ubuntu-1804"
+              },
+              {
+                "Key": "os",
+                "Value": "linux"
+              }
+            ],
+            "trace": [
+              "CdkStackEc2.prepare (/home/ubuntu/environment/devops/cdk/ec2/node_modules/@aws-cdk/core/lib/stack.js:366:23)",
+              "Function.prepare (/home/ubuntu/environment/devops/cdk/ec2/node_modules/@aws-cdk/core/lib/construct.js:89:27)",
+              "Function.synth (/home/ubuntu/environment/devops/cdk/ec2/node_modules/@aws-cdk/core/lib/construct.js:52:14)",
+              "App.synth (/home/ubuntu/environment/devops/cdk/ec2/node_modules/@aws-cdk/core/lib/app.js:67:52)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/ec2/index.js:30:5)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-ec2-linux/Instance1": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Instance1",
+            "trace": [
+              "new CdkStackEc2 (/home/ubuntu/environment/devops/cdk/ec2/index.js:10:13)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/ec2/index.js:26:14)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "0.37.0",
+      "@aws-cdk/cx-api": "0.37.0",
+      "@aws-cdk/aws-ec2": "0.37.0",
+      "@aws-cdk/aws-ssm": "0.37.0",
+      "@aws-cdk/aws-iam": "0.37.0",
+      "@aws-cdk/region-info": "0.37.0",
+      "@aws-cdk/aws-cloudwatch": "0.37.0",
+      "jsii-runtime": "node.js/v8.16.0"
+    }
+  }
+}

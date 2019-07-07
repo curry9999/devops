@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import cdk = require('@aws-cdk/cdk');
+import cdk = require('@aws-cdk/core');
 import ec2 = require('@aws-cdk/aws-ec2');
 
 export class CdkStackEc2 extends cdk.Stack {
@@ -8,9 +8,9 @@ export class CdkStackEc2 extends cdk.Stack {
 
     for (var i = 1; i <= cnt; i++) {
       new ec2.CfnInstance(this, 'Instance' + i, {
-          imageId: this.node.getContext("image_id"),
-          instanceType: this.node.getContext("instance_type"),
-          keyName: this.node.getContext("key_pair"),
+          imageId: this.node.tryGetContext("image_id"),
+          instanceType: this.node.tryGetContext("instance_type"),
+          keyName: this.node.tryGetContext("key_pair"),
           networkInterfaces: [
             {
               deviceIndex: '0',
@@ -25,7 +25,7 @@ export class CdkStackEc2 extends cdk.Stack {
 
 const app = new cdk.App();
 const inst = new CdkStackEc2(app, 'prd-ec2-linux');
-inst.node.apply(new cdk.Tag('env', 'prd'));
-inst.node.apply(new cdk.Tag('Name', 'prd-linux-ubuntu-1804'));
-inst.node.apply(new cdk.Tag('os', 'linux'));
-app.run();
+inst.node.applyAspect(new cdk.Tag('env', 'prd'));
+inst.node.applyAspect(new cdk.Tag('Name', 'prd-linux-ubuntu-1804'));
+inst.node.applyAspect(new cdk.Tag('os', 'linux'));
+app.synth();
