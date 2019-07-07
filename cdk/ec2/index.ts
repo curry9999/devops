@@ -24,7 +24,7 @@ export class CdkStackEc2 extends cdk.Stack {
 }
 
 const app = new cdk.App();
-const inst = new CdkStackEc2(app, 'prd-ec2-linux');
+const inst = new CdkStackEc2(app, 'prd-ec2-linux' ,1);
 inst.node.applyAspect(new cdk.Tag('env', 'prd'));
 inst.node.applyAspect(new cdk.Tag('os', 'linux'));
 inst.node.applyAspect(new cdk.Tag('Name', 'prd-linux-ubuntu-1804'));
