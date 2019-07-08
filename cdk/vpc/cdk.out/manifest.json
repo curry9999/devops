@@ -1,0 +1,307 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "prd-vpc": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "prd-vpc.template.json"
+      },
+      "metadata": {
+        "/prd-vpc/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Vpc8378EB38",
+            "trace": [
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:204:25)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1Subnet5C2D37C4",
+            "trace": [
+              "new Subnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:473:24)",
+              "new PublicSubnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "availabilityZones.forEach (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:402:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTable6C95E38E",
+            "trace": [
+              "new Subnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:484:23)",
+              "new PublicSubnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "availabilityZones.forEach (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:402:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTableAssociation97140677",
+            "trace": [
+              "new Subnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:489:9)",
+              "new PublicSubnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "availabilityZones.forEach (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:402:42)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1DefaultRoute3DA9E72A",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:509:23)",
+              "Vpc.publicSubnets.forEach.publicSubnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:233:30)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:232:32)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1EIPD7E02669",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:27)",
+              "Vpc.createNatGateways (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:361:33)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:236:18)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1NATGateway4D7517AA",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:550:21)",
+              "Vpc.createNatGateways (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:361:33)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:236:18)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1Subnet536B997A",
+            "trace": [
+              "new Subnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:473:24)",
+              "new PrivateSubnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "availabilityZones.forEach (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:407:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableB2C5B500",
+            "trace": [
+              "new Subnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:484:23)",
+              "new PrivateSubnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "availabilityZones.forEach (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:407:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableAssociation70C59FA6",
+            "trace": [
+              "new Subnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:489:9)",
+              "new PrivateSubnet (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "availabilityZones.forEach (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:407:43)",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1DefaultRouteBE02A9ED",
+            "trace": [
+              "PrivateSubnet.addDefaultNatRoute (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:524:23)",
+              "Vpc.privateSubnets.forEach (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:244:31)",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:237:33)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIGWD7BA715C",
+            "trace": [
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:226:25)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-vpc/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcVPCGWBF912B6E",
+            "trace": [
+              "new Vpc (/home/ubuntu/environment/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:228:25)",
+              "new CdkStackVpc (/home/ubuntu/environment/devops/cdk/vpc/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/vpc/index.js:14:1)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
