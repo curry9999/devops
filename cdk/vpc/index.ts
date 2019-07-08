@@ -6,7 +6,7 @@ export class CdkStackVpc extends cdk.Stack {
   constructor(scope: cdk.App, id: string , props?: cdk.StackProps) {
     super(scope, id, props);
 
-    new ec2.Vpc(this, 'Vpc', { maxAzs: 1 });
+    new ec2.Vpc(this, 'Vpc', { maxAZs: 1 });
   }
 }
 

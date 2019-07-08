@@ -13,6 +13,9 @@
             "Value": "prd-vpc/Vpc"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/Resource"
       }
     },
     "VpcPublicSubnet1Subnet5C2D37C4": {
@@ -45,6 +48,9 @@
             "Value": "Public"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PublicSubnet1/Subnet"
       }
     },
     "VpcPublicSubnet1RouteTable6C95E38E": {
@@ -59,6 +65,9 @@
             "Value": "prd-vpc/Vpc/PublicSubnet1"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PublicSubnet1/RouteTable"
       }
     },
     "VpcPublicSubnet1RouteTableAssociation97140677": {
@@ -70,6 +79,9 @@
         "SubnetId": {
           "Ref": "VpcPublicSubnet1Subnet5C2D37C4"
         }
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PublicSubnet1/RouteTableAssociation"
       }
     },
     "VpcPublicSubnet1DefaultRoute3DA9E72A": {
@@ -85,12 +97,18 @@
       },
       "DependsOn": [
         "VpcVPCGWBF912B6E"
-      ]
+      ],
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PublicSubnet1/DefaultRoute"
+      }
     },
     "VpcPublicSubnet1EIPD7E02669": {
       "Type": "AWS::EC2::EIP",
       "Properties": {
         "Domain": "vpc"
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PublicSubnet1/EIP"
       }
     },
     "VpcPublicSubnet1NATGateway4D7517AA": {
@@ -111,6 +129,9 @@
             "Value": "prd-vpc/Vpc/PublicSubnet1"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PublicSubnet1/NATGateway"
       }
     },
     "VpcPrivateSubnet1Subnet536B997A": {
@@ -143,6 +164,9 @@
             "Value": "Private"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PrivateSubnet1/Subnet"
       }
     },
     "VpcPrivateSubnet1RouteTableB2C5B500": {
@@ -157,6 +181,9 @@
             "Value": "prd-vpc/Vpc/PrivateSubnet1"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PrivateSubnet1/RouteTable"
       }
     },
     "VpcPrivateSubnet1RouteTableAssociation70C59FA6": {
@@ -168,6 +195,9 @@
         "SubnetId": {
           "Ref": "VpcPrivateSubnet1Subnet536B997A"
         }
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PrivateSubnet1/RouteTableAssociation"
       }
     },
     "VpcPrivateSubnet1DefaultRouteBE02A9ED": {
@@ -180,6 +210,9 @@
         "NatGatewayId": {
           "Ref": "VpcPublicSubnet1NATGateway4D7517AA"
         }
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/PrivateSubnet1/DefaultRoute"
       }
     },
     "VpcIGWD7BA715C": {
@@ -191,6 +224,9 @@
             "Value": "prd-vpc/Vpc"
           }
         ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/IGW"
       }
     },
     "VpcVPCGWBF912B6E": {
@@ -202,6 +238,9 @@
         "InternetGatewayId": {
           "Ref": "VpcIGWD7BA715C"
         }
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-vpc/Vpc/VPCGW"
       }
     }
   }
