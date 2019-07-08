@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import cdk = require('@aws-cdk/cdk');
+import cdk = require('@aws-cdk/core');
 import iam = require('@aws-cdk/aws-iam');
 
 export class CdkStackIam extends cdk.Stack {
@@ -15,4 +15,4 @@ export class CdkStackIam extends cdk.Stack {
 
 const app = new cdk.App();
 new CdkStackIam(app, 'prd-iam');
-app.run();
+app.synth();
