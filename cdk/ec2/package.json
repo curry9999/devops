@@ -17,6 +17,7 @@
   "dependencies": {
     "@aws-cdk/aws-ec2": "^1.0.0",
     "@aws-cdk/core": "^1.0.0",
+    "lodash": "^4.17.14",
     "source-map-support": "^0.5.9"
   }
 }
