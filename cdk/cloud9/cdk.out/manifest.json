@@ -1,0 +1,70 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "prd-cloud9": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "prd-cloud9.template.json"
+      },
+      "metadata": {
+        "/prd-cloud9": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "env",
+                "Value": "prd"
+              },
+              {
+                "Key": "Name",
+                "Value": "prd-cloud9"
+              }
+            ],
+            "trace": [
+              "CdkStackCloud9.prepare (/home/ubuntu/environment/devops/cdk/cloud9/node_modules/@aws-cdk/core/lib/stack.js:366:23)",
+              "Function.prepare (/home/ubuntu/environment/devops/cdk/cloud9/node_modules/@aws-cdk/core/lib/construct.js:89:27)",
+              "Function.synth (/home/ubuntu/environment/devops/cdk/cloud9/node_modules/@aws-cdk/core/lib/construct.js:52:14)",
+              "App.synth (/home/ubuntu/environment/devops/cdk/cloud9/node_modules/@aws-cdk/core/lib/app.js:67:52)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/cloud9/index.js:21:5)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ],
+        "/prd-cloud9/cloud9": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "cloud9",
+            "trace": [
+              "new CdkStackCloud9 (/home/ubuntu/environment/devops/cdk/cloud9/index.js:9:9)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/cloud9/index.js:18:14)",
+              "Module._compile (module.js:653:30)",
+              "Object.Module._extensions..js (module.js:664:10)",
+              "Module.load (module.js:566:32)",
+              "tryModuleLoad (module.js:506:12)",
+              "Function.Module._load (module.js:498:3)",
+              "Function.Module.runMain (module.js:694:10)",
+              "startup (bootstrap_node.js:204:16)",
+              "bootstrap_node.js:625:3"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.0.0",
+      "@aws-cdk/cx-api": "1.0.0",
+      "@aws-cdk/aws-cloud9": "1.0.0",
+      "jsii-runtime": "node.js/v8.16.0"
+    }
+  }
+}

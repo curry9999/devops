@@ -1,4 +1,4 @@
-const cdk = require('@aws-cdk/cdk');
+const cdk = require('@aws-cdk/core');
 const iam = require('@aws-cdk/aws-iam');
 
 class JavascriptStack extends cdk.Stack {
@@ -11,7 +11,7 @@ class JavascriptStack extends cdk.Stack {
     super(app, id, props);
 
     new iam.CfnGroup(this, 'IamGroup', {
-      groupName: "gruop-curry9999"
+      groupName: "gruop-curry9999-01"
     });
   }
 }

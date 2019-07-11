@@ -1,20 +1,20 @@
 {
   "version": "0.36.0",
   "artifacts": {
-    "prd-dynamodb": {
+    "JavascriptStack": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "prd-dynamodb.template.json"
+        "templateFile": "JavascriptStack.template.json"
       },
       "metadata": {
-        "/prd-dynamodb/TableMultiIndex": [
+        "/JavascriptStack/IamGroup": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "TableMultiIndex",
+            "data": "IamGroup",
             "trace": [
-              "new CdkStackIam (/home/ubuntu/environment/devops/cdk/dynamodb/index.js:9:9)",
-              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/dynamodb/index.js:69:1)",
+              "new JavascriptStack (/home/ubuntu/environment/devops/cdk/javascript/index.js:13:5)",
+              "Object.<anonymous> (/home/ubuntu/environment/devops/cdk/javascript/index.js:19:1)",
               "Module._compile (module.js:653:30)",
               "Object.Module._extensions..js (module.js:664:10)",
               "Module.load (module.js:566:32)",
@@ -33,12 +33,8 @@
     "libraries": {
       "@aws-cdk/core": "1.0.0",
       "@aws-cdk/cx-api": "1.0.0",
-      "@aws-cdk/aws-dynamodb": "1.0.0",
-      "@aws-cdk/aws-applicationautoscaling": "1.0.0",
       "@aws-cdk/aws-iam": "1.0.0",
       "@aws-cdk/region-info": "1.0.0",
-      "@aws-cdk/aws-autoscaling-common": "1.0.0",
-      "@aws-cdk/aws-cloudwatch": "1.0.0",
       "jsii-runtime": "node.js/v8.16.0"
     }
   }
