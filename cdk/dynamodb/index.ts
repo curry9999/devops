@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import cdk = require('@aws-cdk/cdk');
+import cdk = require('@aws-cdk/core');
 import dynamodb = require('@aws-cdk/aws-dynamodb');
 
 export class CdkStackIam extends cdk.Stack {
@@ -67,4 +67,4 @@ export class CdkStackIam extends cdk.Stack {
 
 const app = new cdk.App();
 new CdkStackIam(app, 'prd-dynamodb');
-app.run();
+app.synth();

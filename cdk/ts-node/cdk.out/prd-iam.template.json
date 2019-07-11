@@ -1,0 +1,13 @@
+{
+  "Resources": {
+    "IamGroup": {
+      "Type": "AWS::IAM::Group",
+      "Properties": {
+        "GroupName": "gruop-curry9999-02"
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-iam/IamGroup"
+      }
+    }
+  }
+}

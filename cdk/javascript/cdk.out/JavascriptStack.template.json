@@ -1,0 +1,13 @@
+{
+  "Resources": {
+    "IamGroup": {
+      "Type": "AWS::IAM::Group",
+      "Properties": {
+        "GroupName": "gruop-curry9999-01"
+      },
+      "Metadata": {
+        "aws:cdk:path": "JavascriptStack/IamGroup"
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import cdk = require('@aws-cdk/cdk');
+import cdk = require('@aws-cdk/core');
 import iam = require('@aws-cdk/aws-iam');
 
 export class CdkStackIam extends cdk.Stack {
@@ -7,11 +7,11 @@ export class CdkStackIam extends cdk.Stack {
     super(scope, id, props);
     
     new iam.CfnGroup(this, 'IamGroup', {
-      groupName: "gruop-curry9999"
+      groupName: "gruop-curry9999-02"
     });
   }
 }
 
 const app = new cdk.App();
 new CdkStackIam(app, 'prd-iam');
-app.run();
+app.synth();

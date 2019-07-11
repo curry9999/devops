@@ -1,0 +1,15 @@
+{
+  "Resources": {
+    "cloud9": {
+      "Type": "AWS::Cloud9::EnvironmentEC2",
+      "Properties": {
+        "InstanceType": "t2.micro",
+        "AutomaticStopTimeMinutes": 60,
+        "Name": "cloud9"
+      },
+      "Metadata": {
+        "aws:cdk:path": "prd-cloud9/cloud9"
+      }
+    }
+  }
+}
