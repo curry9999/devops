@@ -1,0 +1,5 @@
+---
+download_dir: c:\work\download
+download_fullpath: c:\work\download\download.msu
+extract_dir: c:\work\extract
+install_fullpath: c:\work\extract\WindowsBlue-KB3191564-x64.xml

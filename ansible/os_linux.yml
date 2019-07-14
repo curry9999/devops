@@ -1,0 +1,34 @@
+---
+- name: os linux common
+  hosts: all
+  become: true
+  gather_facts: false
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - name: linux_common
+      tags:
+        - linux
+        - common
+
+- name: os linux origin
+  hosts: all
+  become: true
+  gather_facts: false
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - name: linux_pids
+      tags:
+        - linux
+        - pids
+
+    - name: linux_pip_package_info
+      tags:
+        - linux
+        - pip_package_info
+
+    - name: linux_gather_facts
+      tags:
+        - linux
+        - gather_facts

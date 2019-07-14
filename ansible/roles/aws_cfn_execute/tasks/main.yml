@@ -1,0 +1,4 @@
+---
+- name: execute cloudformation stack
+  include_tasks: "{{ role_path }}/tasks/sub.yml"
+  with_items: "{{ cfn_var_name }}"
