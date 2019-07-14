@@ -2,6 +2,7 @@
 
 OPTIONS=$@
 CURRENT_DIR=`pwd`
+ANSUBLE_DIR=${CURRENT_DIR}/ansible/
 CDK_DIR=cdk/ec2/
 METADATA="--path-metadata false --version-reporting false"
 
@@ -24,7 +25,7 @@ test $? -ne 0 && exit 1
 cdk deploy -f ${METADATA}
 test $? -ne 0 && exit 1
 
-cd ${CURRENT_DIR}
+cd ${ANSUBLE_DIR}
 
 ansible-playbook -i hosts/prd/ os_linux.yml --tags common -l tag_os_linux
 test $? -ne 0 && exit 1
