@@ -3,15 +3,22 @@ It contains code necessary for DevOps deployment.
 
 # directory
 - cdk
-   - AWS CDK
-- cfn
-   - CloudFormation template
-- exec
-   - Execute file name
-- hosts
-   - ansible inventory
-- roles
-   - ansible roles
+   - cloud9
+   - dynamodb
+   - ec2
+   - iam
+   - javascript
+   - ts-node
+   - vpc
+- ansible
+  - cfn
+     - CloudFormation template
+  - exec
+     - Execute file name
+  - hosts
+     - ansible inventory
+  - roles
+     - ansible roles
 
 # execute file name
 - _deploy_aws.sh
