@@ -1,7 +1,0 @@
-{
-  "context": {
-    "name": "cloud9",
-    "instance_type": "t2.micro"
-  },
-  "app": "node index"
-}
