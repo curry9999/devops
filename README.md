@@ -21,26 +21,16 @@ It contains code necessary for DevOps deployment.
      - ansible roles
 
 # execute file name
-- _deploy_aws.sh
+- linux.sh
    - Please set AWS authentication information with aws configure. 
-
-- _deploy_cdk_inux.sh
-   - Please set AWS authentication information with aws configure. 
-   - Deploy CloudFormation using the AWS CDK.
+   - Deploy CloudFormation using the AWS CDK or Ansible.
    - Operation confirmed OS
      - Ubuntu 18.04 LTS
 
-- _deploy_cloud9.sh
-   - Please set AWS authentication information with aws configure. 
+- vpc.sh
    - Deploy CloudFormation using the AWS CDK.
-   - AWS cloud9 starts on EC2 basis.
 
-- _deploy_linux.sh
-   - Please set AWS authentication information with aws configure. 
-   - Operation confirmed OS
-     - Ubuntu 18.04 LTS
-
-- _deploy_windows.sh
+- windows.sh
    - Please set AWS authentication information with aws configure. 
    - Operation confirmed OS
       - Windows Server 2019
