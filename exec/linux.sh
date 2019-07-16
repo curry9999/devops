@@ -1,15 +1,16 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]; then
+  OPTIONS="1"
+else
+  OPTIONS=$@
+fi
+
 CURRENT_DIR=`pwd`
 ANSIBLE_DIR=${CURRENT_DIR}/ansible/
 CDK_DIR=cdk/ec2/
 METADATA="--path-metadata false --version-reporting false"
-
-if [ $# -eq 0 ]; then
-  OPTIONS="cdk"
-else
-  OPTIONS=$@
-fi
+CONTEXTDATA="-c count=${OPTIONS}"
 
 ###############
 # CloudFormation
@@ -38,10 +39,10 @@ else
     exit 0
   fi
 
-  cdk synth ${METADATA}
+  cdk synth ${METADATA} ${CONTEXTDATA}
   test $? -ne 0 && exit 1
 
-  cdk deploy -f ${METADATA}
+  cdk deploy -f ${METADATA} ${CONTEXTDATA}
   test $? -ne 0 && exit 1
 
 fi
