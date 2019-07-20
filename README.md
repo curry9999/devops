@@ -3,13 +3,9 @@ It contains code necessary for DevOps deployment.
 
 # directory
 - cdk
-   - cloud9
-   - dynamodb
-   - ec2
-   - iam
-   - javascript
-   - ts-node
+   - linux
    - vpc
+   - windows
 - ansible
   - cfn
      - CloudFormation template
