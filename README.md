@@ -3,9 +3,8 @@ It contains code necessary for DevOps deployment.
 
 # directory
 - cdk
-   - linux
+   - ec2
    - vpc
-   - windows
 - ansible
   - cfn
      - CloudFormation template
