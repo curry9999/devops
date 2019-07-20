@@ -51,14 +51,12 @@ fi
 # OS
 ###############
 # skip OS
-if [ ${OPTIONS} = "s" ]; then
-  exit 0
+if [ ${OPTIONS} = "a" ]; then
+  cd ${ANSIBLE_DIR}
+
+  ansible-playbook -i hosts/prd/ os_linux.yml --tags common -l tag_os_linux
+  test $? -ne 0 && exit 1
 fi
-
-cd ${ANSIBLE_DIR}
-
-ansible-playbook -i hosts/prd/ os_linux.yml --tags common -l tag_os_linux
-test $? -ne 0 && exit 1
 
 ###############
 # Final
