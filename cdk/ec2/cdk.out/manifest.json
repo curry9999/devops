@@ -1,0 +1,74 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "prd-ec2-linux": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "prd-ec2-linux.template.json"
+      },
+      "metadata": {
+        "/prd-ec2-linux": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "env",
+                "Value": "prd"
+              },
+              {
+                "Key": "os",
+                "Value": "linux"
+              },
+              {
+                "Key": "Name",
+                "Value": "prd-linux-ubuntu-1804"
+              }
+            ],
+            "trace": [
+              "CdkStackEc2.prepare (/Users/curry/Workspace/devops/cdk/ec2/node_modules/@aws-cdk/core/lib/stack.js:366:23)",
+              "Function.prepare (/Users/curry/Workspace/devops/cdk/ec2/node_modules/@aws-cdk/core/lib/construct.js:89:27)",
+              "Function.synth (/Users/curry/Workspace/devops/cdk/ec2/node_modules/@aws-cdk/core/lib/construct.js:52:14)",
+              "App.synth (/Users/curry/Workspace/devops/cdk/ec2/node_modules/@aws-cdk/core/lib/app.js:67:52)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/ec2/index.js:31:5)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/prd-ec2-linux/Ec2Instance1": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Ec2Instance1",
+            "trace": [
+              "new CdkStackEc2 (/Users/curry/Workspace/devops/cdk/ec2/index.js:11:13)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/ec2/index.js:27:14)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.0.0",
+      "@aws-cdk/cx-api": "1.0.0",
+      "@aws-cdk/aws-ec2": "1.0.0",
+      "@aws-cdk/aws-ssm": "1.0.0",
+      "@aws-cdk/aws-iam": "1.0.0",
+      "@aws-cdk/region-info": "1.0.0",
+      "@aws-cdk/aws-cloudwatch": "1.0.0",
+      "jsii-runtime": "node.js/v12.6.0"
+    }
+  }
+}
