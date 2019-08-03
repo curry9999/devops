@@ -8,7 +8,7 @@ fi
 
 CURRENT_DIR=`pwd`
 ANSIBLE_DIR=${CURRENT_DIR}/ansible/
-CDK_DIR=cdk/ec2/
+CDK_DIR=cdk/linux/
 METADATA="--path-metadata false --version-reporting false"
 CONTEXTDATA="-c count=${OPTIONS}"
 
