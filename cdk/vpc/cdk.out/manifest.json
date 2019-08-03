@@ -1,0 +1,768 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "LoadBalancerStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "LoadBalancerStack.template.json"
+      },
+      "metadata": {
+        "/LoadBalancerStack/VPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCB9E5F0B4",
+            "trace": [
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:204:25)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1SubnetB4246D30",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:473:24)",
+              "new PublicSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:402:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1RouteTableFEE4B781",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:484:23)",
+              "new PublicSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:402:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1RouteTableAssociation0B0896DC",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:489:9)",
+              "new PublicSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:402:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1DefaultRoute91CEF279",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:509:23)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:233:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:232:32)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1EIP6AD938E8",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:27)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:361:33)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:236:18)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet1NATGatewayE0556630",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:550:21)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:361:33)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:236:18)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2Subnet74179F39",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:473:24)",
+              "new PublicSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:402:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2RouteTable6F1A15F1",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:484:23)",
+              "new PublicSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:402:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2RouteTableAssociation5A808732",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:489:9)",
+              "new PublicSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:541:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:402:42",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2DefaultRouteB7481BBA",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:509:23)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:233:30",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:232:32)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2EIP4947BC00",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:552:27)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:361:33)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:236:18)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPublicSubnet2NATGateway3C070193",
+            "trace": [
+              "PublicSubnet.addNatGateway (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:550:21)",
+              "Vpc.createNatGateways (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:361:33)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:236:18)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1Subnet8BCA10E0",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:473:24)",
+              "new PrivateSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:407:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1RouteTableBE8A6027",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:484:23)",
+              "new PrivateSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:407:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1RouteTableAssociation347902D1",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:489:9)",
+              "new PrivateSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:407:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet1DefaultRouteAE1D6490",
+            "trace": [
+              "PrivateSubnet.addDefaultNatRoute (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:524:23)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:244:31",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:237:33)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2SubnetCFCDAA7A",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:473:24)",
+              "new PrivateSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:407:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2RouteTable0A19E10E",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:484:23)",
+              "new PrivateSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:407:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2RouteTableAssociation0C73D413",
+            "trace": [
+              "new Subnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:489:9)",
+              "new PrivateSubnet (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:568:9)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:407:43",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:386:32)",
+              "Vpc.createSubnets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:382:18)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:222:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCPrivateSubnet2DefaultRouteF4F5CFD2",
+            "trace": [
+              "PrivateSubnet.addDefaultNatRoute (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:524:23)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:244:31",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:237:33)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCIGWB7E252D3",
+            "trace": [
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:226:25)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/VPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCVPCGW99B986DC",
+            "trace": [
+              "new Vpc (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/vpc.js:228:25)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:11:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/ASG/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGInstanceSecurityGroup0525485D",
+            "trace": [
+              "new SecurityGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:141:30)",
+              "new AutoScalingGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:123:30)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:12:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/ASG/InstanceSecurityGroup/from LoadBalancerStackLBSecurityGroupB71A4BA8:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGInstanceSecurityGroupfromLoadBalancerStackLBSecurityGroupB71A4BA880C28BC1C3",
+            "trace": [
+              "SecurityGroup.addIngressRule (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:33:13)",
+              "SecurityGroup.addIngressRule (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:167:19)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:89:31",
+              "ReactiveList.forEachAndForever (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:192:13)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:88:51",
+              "ReactiveList.forEachAndForever (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:192:13)",
+              "Connections.allowFrom (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:87:30)",
+              "Connections.allowTo (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:72:31)",
+              "ApplicationListener.registerConnectable (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:147:26)",
+              "ApplicationTargetGroup.registerListener (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:74:22)",
+              "ApplicationListener.addDefaultTargetGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:164:21)",
+              "ApplicationListener.addTargetGroups (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:76:22)",
+              "ApplicationListener.addTargets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:107:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:24:18)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/ASG/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGInstanceRoleE263A41B",
+            "trace": [
+              "new Role (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-iam/lib/role.js:30:22)",
+              "new AutoScalingGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:130:35)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:12:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/ASG/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGInstanceProfile0A2834D7",
+            "trace": [
+              "new AutoScalingGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:133:28)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:12:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/ASG/LaunchConfig": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGLaunchConfigC00AF12B",
+            "trace": [
+              "new AutoScalingGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:141:30)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:12:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/ASG/ASG": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASG46ED3070",
+            "trace": [
+              "new AutoScalingGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:185:33)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:12:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/ASG/ScalingPolicyAModestLoad/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGScalingPolicyAModestLoadC5714E5A",
+            "trace": [
+              "new TargetTrackingScalingPolicy (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-autoscaling/lib/target-tracking-scaling-policy.js:14:25)",
+              "AutoScalingGroup.scaleOnRequestCount (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:79:24)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:29:13)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+            "trace": [
+              "Function.fromStringParameterAttributes (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:49:15)",
+              "Function.valueForStringParameter (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ssm/lib/parameter.js:105:21)",
+              "AmazonLinuxImage.getImage (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/machine-image.js:63:41)",
+              "new AutoScalingGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-autoscaling/lib/auto-scaling-group.js:137:48)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:12:21)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LB8A12904C",
+            "trace": [
+              "new BaseLoadBalancer (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-load-balancer.js:23:26)",
+              "new ApplicationLoadBalancer (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:22:9)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:17:20)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBSecurityGroup8A41EA2B",
+            "trace": [
+              "new SecurityGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:141:30)",
+              "new ApplicationLoadBalancer (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:27:53)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:17:20)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/LB/SecurityGroup/to LoadBalancerStackASGInstanceSecurityGroupB0050A17:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBSecurityGrouptoLoadBalancerStackASGInstanceSecurityGroupB0050A1780E09A2D36",
+            "trace": [
+              "SecurityGroup.addEgressRule (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:48:13)",
+              "SecurityGroup.addEgressRule (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/security-group.js:193:19)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:66:31",
+              "ReactiveList.forEachAndForever (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:192:13)",
+              "/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:65:51",
+              "ReactiveList.forEachAndForever (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:192:13)",
+              "Connections.allowTo (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-ec2/lib/connections.js:64:30)",
+              "ApplicationListener.registerConnectable (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:147:26)",
+              "ApplicationTargetGroup.registerListener (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:74:22)",
+              "ApplicationListener.addDefaultTargetGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:164:21)",
+              "ApplicationListener.addTargetGroups (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:76:22)",
+              "ApplicationListener.addTargets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:107:14)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:24:18)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/LB/Listener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBListener49E825B4",
+            "trace": [
+              "new BaseListener (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-listener.js:12:26)",
+              "new ApplicationListener (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:25:9)",
+              "ApplicationLoadBalancer.addListener (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-load-balancer.js:64:16)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:21:29)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/LoadBalancerStack/LB/Listener/TargetGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LBListenerTargetGroupF04FCF6D",
+            "trace": [
+              "new TargetGroupBase (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/shared/base-target-group.js:29:25)",
+              "new ApplicationTargetGroup (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-target-group.js:20:9)",
+              "ApplicationListener.addTargets (/Users/curry/Workspace/devops/cdk/vpc/node_modules/@aws-cdk/aws-elasticloadbalancingv2/lib/alb/application-listener.js:96:23)",
+              "new LoadBalancerStack (/Users/curry/Workspace/devops/cdk/vpc/index.js:24:18)",
+              "Object.<anonymous> (/Users/curry/Workspace/devops/cdk/vpc/index.js:35:1)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/aws-autoscaling": "1.1.0",
+      "@aws-cdk/aws-ec2": "1.1.0",
+      "@aws-cdk/aws-ssm": "1.1.0",
+      "@aws-cdk/aws-iam": "1.1.0",
+      "@aws-cdk/core": "1.1.0",
+      "@aws-cdk/cx-api": "1.1.0",
+      "@aws-cdk/region-info": "1.1.0",
+      "@aws-cdk/aws-cloudwatch": "1.1.0",
+      "@aws-cdk/aws-elasticloadbalancingv2": "1.1.0",
+      "@aws-cdk/aws-autoscaling-common": "1.1.0",
+      "jsii-runtime": "node.js/v12.6.0"
+    }
+  }
+}
