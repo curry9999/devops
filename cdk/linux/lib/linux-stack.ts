@@ -18,10 +18,7 @@ export class CdkStackEc2 extends cdk.Stack {
         instanceType: this.getContext("instance_type"),
         keyName: this.getContext("key_pair"),
         networkInterfaces: [
-          {
-            deviceIndex: '0',
-            associatePublicIpAddress: true
-          }
+          { deviceIndex: '0', associatePublicIpAddress: true }
         ]
       }
     );
