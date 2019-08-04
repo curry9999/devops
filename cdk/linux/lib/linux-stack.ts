@@ -13,7 +13,7 @@ export class CdkStackEc2 extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    new ec2.CfnInstance(this, 'Ec2Instance', {
+    new ec2.CfnInstance(this, 'Instance', {
         imageId: this.getContext("image_id"),
         instanceType: this.getContext("instance_type"),
         keyName: this.getContext("key_pair"),

@@ -1,19 +1,14 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]; then
-  OPTIONS="1"
-else
-  OPTIONS=$@
-fi
-
+OPTIONS=$@
 CURRENT_DIR=`pwd`
 ANSIBLE_DIR=${CURRENT_DIR}/ansible/
 CDK_DIR=cdk/linux/
-METADATA="--path-metadata false --version-reporting false"
-CONTEXTDATA="-c count=${OPTIONS}"
+METADATA=""
+#METADATA="--path-metadata false --version-reporting false"
 
 ###############
-# CloudFormation
+# AWS Resource
 ###############
 # Ansible
 if [ ${OPTIONS} = "ansible" ]; then
@@ -33,25 +28,30 @@ else
   npm run build
   test $? -ne 0 && exit 1
 
-  # remove
-  if [ ${OPTIONS} = "x" ]; then
+  # destroy only
+  if [ ${OPTIONS} = "d" ]; then
     cdk destroy -f
-    exit 0
+    test $? -ne 0 && exit 1
   fi
 
-  cdk synth ${METADATA} ${CONTEXTDATA}
+  cdk synth ${METADATA}
   test $? -ne 0 && exit 1
 
-  cdk deploy -f ${METADATA} ${CONTEXTDATA}
+  cdk deploy -f ${METADATA}
   test $? -ne 0 && exit 1
 
+  # create and destroy
+  if [ ${OPTIONS} = "x" ]; then
+    cdk destroy -f
+    test $? -ne 0 && exit 1
+  fi
 fi
 
 ###############
 # OS
 ###############
-# skip OS
-if [ ${OPTIONS} = "a" ]; then
+# deploy
+if [ ${OPTIONS} = "os" ]; then
   cd ${ANSIBLE_DIR}
 
   ansible-playbook -i hosts/prd/ os_linux.yml --tags common -l tag_os_linux
