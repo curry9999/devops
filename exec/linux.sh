@@ -32,6 +32,7 @@ else
   if [ ${OPTIONS} = "d" ]; then
     cdk destroy -f
     test $? -ne 0 && exit 1
+    exit 0
   fi
 
   cdk synth ${METADATA}
