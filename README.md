@@ -3,17 +3,17 @@ It contains code necessary for DevOps deployment.
 
 # directory
 - cdk
-   - ec2
-   - vpc
+   - linux
 - ansible
   - cfn
      - CloudFormation template
-  - exec
-     - Execute file name
   - hosts
      - ansible inventory
   - roles
      - ansible roles
+- exec
+   - linux.sh
+   - windows.sh
 
 # execute file name
 - linux.sh
@@ -21,9 +21,6 @@ It contains code necessary for DevOps deployment.
    - Deploy CloudFormation using the AWS CDK or Ansible.
    - Operation confirmed OS
      - Ubuntu 18.04 LTS
-
-- vpc.sh
-   - Deploy CloudFormation using the AWS CDK.
 
 - windows.sh
    - Please set AWS authentication information with aws configure. 
