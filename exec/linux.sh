@@ -1,8 +1,10 @@
 #!/bin/bash
 
-
-OPTION=$1
-test $# -eq 0 ; OPTION="cdk"
+if [ $# -eq 0 ]; then
+  OPTION="cdk"
+else
+  OPTION=$1
+fi
 
 CURRENT_DIR=`pwd`
 ANSIBLE_DIR=${CURRENT_DIR}/ansible/
@@ -38,6 +40,7 @@ test $? -ne 0 && exit 1
 if [ ${OPTION} = "x" ]; then
   cdk destroy -f
   test $? -ne 0 && exit 1
+  exit 0
 fi
 
 ###############
