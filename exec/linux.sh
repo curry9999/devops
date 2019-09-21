@@ -13,48 +13,36 @@ METADATA=""
 ###############
 # AWS Resource
 ###############
-# Ansible
-if [ ${OPTION} = "ansible" ]; then
-  cd ${ANSIBLE_DIR}
+cd ${CDK_DIR}
 
-  ansible-playbook -i hosts/prd/hosts.ini aws_linux.yml -l aws_linux
+npm install
+test $? -ne 0 && exit 1
+
+npm run build
+test $? -ne 0 && exit 1
+
+# destroy only
+if [ ${OPTION} = "d" ]; then
+  cdk destroy -f
   test $? -ne 0 && exit 1
+  exit 0
+fi
 
-# AWS CDK
-else
+cdk synth ${METADATA}
+test $? -ne 0 && exit 1
 
-  cd ${CDK_DIR}
+cdk deploy -f ${METADATA}
+test $? -ne 0 && exit 1
 
-  npm install
+# create and destroy
+if [ ${OPTION} = "x" ]; then
+  cdk destroy -f
   test $? -ne 0 && exit 1
-
-  npm run build
-  test $? -ne 0 && exit 1
-
-  # destroy only
-  if [ ${OPTION} = "d" ]; then
-    cdk destroy -f
-    test $? -ne 0 && exit 1
-    exit 0
-  fi
-
-  cdk synth ${METADATA}
-  test $? -ne 0 && exit 1
-
-  cdk deploy -f ${METADATA}
-  test $? -ne 0 && exit 1
-
-  # create and destroy
-  if [ ${OPTION} = "x" ]; then
-    cdk destroy -f
-    test $? -ne 0 && exit 1
-  fi
 fi
 
 ###############
 # OS
 ###############
-# deploy
 if [ ${OPTION} = "os" ]; then
   cd ${ANSIBLE_DIR}
 
