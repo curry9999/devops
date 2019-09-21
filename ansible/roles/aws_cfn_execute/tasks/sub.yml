@@ -5,7 +5,7 @@
     dest: "{{ stack_path }}/{{ item.stack_name }}.yaml"
 
 - name: get cloudformation info
-  cloudformation_facts:
+  cloudformation_info:
     stack_name: "{{ item.stack_name }}"
   register: res
 
