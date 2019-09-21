@@ -1,9 +1,0 @@
----
-- name: Add 127.0.0.1 as an A record for testlocal
-  win_hosts:
-    state: present
-    canonical_name: testlocal
-    ip_address: 127.0.0.1
-  register: res
-
-- debug: var=res

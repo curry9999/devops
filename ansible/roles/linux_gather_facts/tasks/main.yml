@@ -1,7 +1,0 @@
----
-- name: gather_facts
-  gather_facts:
-    parallel: false
-  register: res
-
-- debug: msg="{{ res }}"
