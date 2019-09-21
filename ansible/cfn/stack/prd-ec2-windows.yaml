@@ -1,12 +1,8 @@
-AWSTemplateFormatVersion: 2010-09-09
 Resources:
-########################################
-### EC2 InstanceName prd-windows-2019
-########################################
   Ec2Instance1:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-0080a567a9989e1d5
+      ImageId: ami-04b47b75a5897bac8
       KeyName: kp_wai
       InstanceType: t2.medium
       NetworkInterfaces:
