@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export OS=linux
+
 if [ $# -eq 0 ]; then
   OPTION="cdk"
 else
@@ -8,7 +10,7 @@ fi
 
 CURRENT_DIR=`pwd`
 ANSIBLE_DIR=${CURRENT_DIR}/ansible/
-CDK_DIR=cdk/linux/
+CDK_DIR=cdk/${OS}/
 METADATA=""
 #METADATA="--path-metadata false --version-reporting false"
 
@@ -49,7 +51,7 @@ fi
 if [ ${OPTION} = "os" ]; then
   cd ${ANSIBLE_DIR}
 
-  ansible-playbook -i hosts/prd/ os_linux.yml --tags common -l tag_os_linux
+  ansible-playbook -i hosts/prd/ os_${OS}.yml --tags common -l tag_os_${OS}
   test $? -ne 0 && exit 1
 fi
 

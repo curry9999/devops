@@ -1,0 +1,8 @@
+{
+  "context": {
+    "key_pair": "keypair_cloud9",
+    "instance_type": "t2.micro",
+    "image_id": "ami-04b47b75a5897bac8"
+  },
+  "app": "npx ts-node bin/windows.ts"
+}

@@ -26,5 +26,3 @@ It contains code necessary for DevOps deployment.
    - Please set AWS authentication information with aws configure. 
    - Operation confirmed OS
       - Windows Server 2019
-      - Windows Server 2016
-      - Windows Server 2012 R2
