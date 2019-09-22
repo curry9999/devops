@@ -11,16 +11,16 @@ It contains code necessary for DevOps deployment.
      - ansible inventory
   - roles
      - ansible roles
-- exec
-   - linux.sh
-   - windows.sh
+  - linux.sh
+  - windows.sh
+  - common.sh
 
 # execute file name
 - linux.sh
    - Please set AWS authentication information with aws configure. 
    - Deploy CloudFormation using the AWS CDK or Ansible.
    - Operation confirmed OS
-     - Ubuntu 18.04 LTS
+     - Amazon Linux 2
 
 - windows.sh
    - Please set AWS authentication information with aws configure. 
