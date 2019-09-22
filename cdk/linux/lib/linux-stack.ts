@@ -13,9 +13,12 @@ export class CdkStackEc2 extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+    const ami = new ec2.AmazonLinuxImage().getImage(this);
+    const instance_type = new ec2.InstanceType(this.getContext("instance_type")).toString();
+
     new ec2.CfnInstance(this, 'Instance', {
-        imageId: this.getContext("image_id"),
-        instanceType: this.getContext("instance_type"),
+        imageId: ami.imageId,
+        instanceType: instance_type,
         keyName: this.getContext("key_pair"),
         networkInterfaces: [
           { deviceIndex: '0', associatePublicIpAddress: true }

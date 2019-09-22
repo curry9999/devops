@@ -14,10 +14,11 @@ export class CdkStackEc2 extends cdk.Stack {
     super(scope, id, props);
 
     const ami = new ec2.WindowsImage(ec2.WindowsVersion.WINDOWS_SERVER_2019_JAPANESE_FULL_BASE).getImage(this);
+    const instance_type = new ec2.InstanceType(this.getContext("instance_type")).toString();
 
     new ec2.CfnInstance(this, 'Instance', {
         imageId: ami.imageId,
-        instanceType: this.getContext("instance_type"),
+        instanceType: instance_type,
         keyName: this.getContext("key_pair"),
         networkInterfaces: [
           { deviceIndex: '0', associatePublicIpAddress: true }
