@@ -13,10 +13,10 @@ export class CdkStackEc2 extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const shellCommands = ec2.UserData.forWindows();
+    const ami = new ec2.WindowsImage(ec2.WindowsVersion.WINDOWS_SERVER_2019_JAPANESE_FULL_BASE).getImage(this);
 
     new ec2.CfnInstance(this, 'Instance', {
-        imageId: this.getContext("image_id"),
+        imageId: ami.imageId,
         instanceType: this.getContext("instance_type"),
         keyName: this.getContext("key_pair"),
         networkInterfaces: [
