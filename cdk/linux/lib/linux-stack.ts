@@ -13,6 +13,7 @@ export class CdkStackEc2 extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+    const env = this.getContext("env");
     const ami = new ec2.AmazonLinuxImage().getImage(this);
     const instance_type = new ec2.InstanceType(this.getContext("instance_type")).toString();
 
@@ -26,8 +27,8 @@ export class CdkStackEc2 extends cdk.Stack {
       }
     );
 
-    this.addTag('env', 'prd');
+    this.addTag('env', env);
     this.addTag('os', 'linux');
-    this.addTag('Name', 'prd-linux-ubuntu-1804');
+    this.addTag('Name', 'Amazon Linux 2');
   }
 }

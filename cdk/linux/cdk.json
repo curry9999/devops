@@ -1,5 +1,6 @@
 {
   "context": {
+    "env": "prd",
     "key_pair": "keypair_cloud9",
     "instance_type": "t2.micro"
   },
