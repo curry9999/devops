@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import cdk = require('@aws-cdk/core');
 import ec2 = require('@aws-cdk/aws-ec2');
 
@@ -32,3 +33,8 @@ export class CdkStackEc2 extends cdk.Stack {
     this.addTag('Name', 'Amazon Linux 2');
   }
 }
+
+const app = new cdk.App();
+
+new CdkStackEc2(app, 'ec2-linux');
+app.synth();

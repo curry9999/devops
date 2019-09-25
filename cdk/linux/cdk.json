@@ -4,5 +4,5 @@
     "key_pair": "keypair_cloud9",
     "instance_type": "t2.micro"
   },
-  "app": "npx ts-node bin/linux.ts"
+  "app": "npx ts-node stack.ts"
 }
