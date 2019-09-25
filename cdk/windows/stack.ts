@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import cdk = require('@aws-cdk/core');
 import ec2 = require('@aws-cdk/aws-ec2');
 
@@ -31,3 +32,7 @@ export class CdkStackEc2 extends cdk.Stack {
     this.addTag('Name', 'WindowsServer2019');
   }
 }
+
+const app = new cdk.App();
+new CdkStackEc2(app, 'prd-ec2-windows');
+app.synth();
