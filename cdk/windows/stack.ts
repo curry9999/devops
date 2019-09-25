@@ -14,6 +14,7 @@ export class CdkStackEc2 extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+    const env = this.getContext("env");
     const ami = new ec2.WindowsImage(ec2.WindowsVersion.WINDOWS_SERVER_2019_JAPANESE_FULL_BASE).getImage(this);
     const instance_type = new ec2.InstanceType(this.getContext("instance_type")).toString();
 
@@ -27,12 +28,12 @@ export class CdkStackEc2 extends cdk.Stack {
       }
     );
 
-    this.addTag('env', 'prd');
+    this.addTag('env', env);
     this.addTag('os', 'windows');
     this.addTag('Name', 'WindowsServer2019');
   }
 }
 
 const app = new cdk.App();
-new CdkStackEc2(app, 'prd-ec2-windows');
+new CdkStackEc2(app, 'ec2-windows');
 app.synth();
