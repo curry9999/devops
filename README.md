@@ -11,9 +11,9 @@ It contains code necessary for DevOps deployment.
      - ansible inventory
   - roles
      - ansible roles
-  - linux.sh
-  - windows.sh
-  - common.sh
+- linux.sh
+- windows.sh
+- common.sh
 
 # execute file name
 - linux.sh
