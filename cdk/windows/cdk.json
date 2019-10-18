@@ -1,7 +1,7 @@
 {
   "context": {
     "env": "prd",
-    "key_pair": "keypair_cloud9",
+    "key_pair": "kp_cdk",
     "instance_type": "t2.micro"
   },
   "app": "npx ts-node stack.ts"
