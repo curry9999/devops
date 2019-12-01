@@ -30,6 +30,9 @@ if [ ${OPTION} = "d" ]; then
   exit 0
 fi
 
+cdk bootstrap
+test $? -ne 0 && exit 1
+
 cdk synth ${METADATA}
 test $? -ne 0 && exit 1
 
