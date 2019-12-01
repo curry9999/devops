@@ -30,6 +30,11 @@ if [ ${OPTION} = "d" ]; then
   exit 0
 fi
 
+aws ec2 describe-key-pairs --key-name "kp_cdk" > /dev/null 2>&1
+ret=$?
+
+test ${ret} -ne 0 && aws ec2 import-key-pair --key-name "kp_cdk" --public-key-material file://~/.ssh/id_rsa.pub
+
 cdk bootstrap
 test $? -ne 0 && exit 1
 
