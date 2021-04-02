@@ -10,11 +10,13 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "typescript": "*",
-    "ts-node": "*",
-    "aws-cdk": "*",
-    "@types/node": "*",
+    "@aws-cdk/aws-ec2": "*",
     "@aws-cdk/core": "*",
-    "@aws-cdk/aws-ec2": "*"
+    "@types/node": "*",
+    "aws-cdk": "*",
+    "netmask": "^2.0.1",
+    "ts-node": "*",
+    "typescript": "*",
+    "y18n": "^4.0.1"
   }
 }
